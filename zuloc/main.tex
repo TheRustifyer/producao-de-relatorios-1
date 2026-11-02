@@ -32,8 +32,29 @@
 
 \maketitle
 \thispagestyle{empty}
+
+% Índices — numeração romana
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\tableofcontents
+\listoftables
+\listoffigures
+
 \clearpage
 
+% Corpo do relatório — numeração árabe
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section{Introdução}
+
+\section{Caso de Estudo}
+
+\section{Conclusão}
+
+\clearpage
+\addcontentsline{toc}{section}{Bibliografia}
 \bibliographystyle{plain}
 \bibliography{referencias}
 
