@@ -6,7 +6,7 @@
 
 📚 *BSc in Physics · First year · First semester · 2026/27*
 
-Personal study notes for learning how to turn scientific work into a clear, well-supported report. The collection connects the argument, its evidence, and the tools used to compose and present it.
+Personal study notes on turning scientific work into a clear report, supporting claims with evidence, and presenting results. The collection covers both the scientific argument and the tools used to compose it.
 
 **[📓 Study notes](#study-notes) · [🚀 Getting started](#getting-started) · [🌊 The Zuloc project](#the-zuloc-project)**
 
@@ -16,7 +16,7 @@ Personal study notes for learning how to turn scientific work into a clear, well
 - **🧮 LaTeX in practice** — complete examples and focused snippets for text, mathematics, tables, figures, references, and code.
 - **📊 Presenting results** — visual explanations, Beamer, and the connection between a report and its oral presentation.
 
-The notes bring together explanations, worked examples, exercises with solutions, and short recall questions. References accompany the material so that definitions, procedures, and corrections can be traced to their sources.
+Each note combines explanations with worked examples, exercises and solutions, and short recall questions. References show where the definitions, procedures, and corrections come from.
 
 ## Study notes
 
@@ -30,7 +30,7 @@ The notes bring together explanations, worked examples, exercises with solutions
 | **06 · Academic integrity** | Make informed decisions about authorship, results, licences, privacy, and AI tools | [Ethics and academic use of ICT](06%20%C3%89tica%20y%20uso%20acad%C3%A9mico%20de%20las%20TIC.md) |
 | **07 · Code in reports** | Show programs faithfully, configure listings, and connect the displayed code to its execution and results | [Code listings with listing and listings](07%20Listados%20de%20c%C3%B3digo%20con%20listing%20y%20listings.md) |
 
-🧭 The [detailed course index](Produ%C3%A7%C3%A3o%20de%20Relat%C3%B3rios%20%E2%80%94%20%C3%ADndice%20de%20contenidos.md) follows the ten official syllabus units and gathers the assessment information, teaching references, and assignment requirements.
+🧭 The [detailed course index](Produ%C3%A7%C3%A3o%20de%20Relat%C3%B3rios%20%E2%80%94%20%C3%ADndice%20de%20contenidos.md) follows the ten official syllabus units. It also brings together assessment details, teaching references, and assignment requirements.
 
 ## Getting started
 
@@ -42,7 +42,7 @@ The notes bring together explanations, worked examples, exercises with solutions
 
 ## The Zuloc project
 
-🌊 **Laboratório Zuloc** is the course assignment that brings the material together: a report and a presentation about a simulated recycled-packaging operation.
+🌊 **Laboratório Zuloc** is the course assignment that brings these topics together in a report and presentation about a simulated recycled-packaging operation.
 
 **Current stage: preparation of the report, simulation, and presentation.** The study notes already develop the assignment requirements, the production model, and the checks needed to interpret its results.
 
@@ -52,7 +52,7 @@ The notes bring together explanations, worked examples, exercises with solutions
 | **Simulation** | Demand, production capacity, outstanding orders, workforce utilisation, and comparison of staffing scenarios | [Model and worked example](03%20Composici%C3%B3n%20avanzada%20e%20%C3%ADndices%20en%20LaTeX.md) |
 | **Presentation** | Five slides connecting the results with a justified staffing decision and attributed visual material | [Presentation requirements](05%20Presentaciones%20cient%C3%ADficas.md) |
 
-The assignment's unresolved differences over the simulation period and scenario B are recorded alongside the relevant requirements. The supplied data and the assumptions used in an example remain identifiable.
+The notes record two unresolved points in the assignment: the simulation period and the instructions for scenario B. They keep the supplied data separate from the assumptions used in worked examples.
 
 ## Languages and reading format
 

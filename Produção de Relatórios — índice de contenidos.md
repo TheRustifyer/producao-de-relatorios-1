@@ -25,9 +25,9 @@ tags:
 > [!contexto] Alcance académico
 > Asignatura de primer curso de la Licenciatura en Física de FCUL, situada en el primer semestre de 2026/2027 y con 3 ECTS. Su objetivo es aplicar normas y buenas prácticas a informes, documentos científicos y presentaciones, e introducir LaTeX para su producción.[^plan] La responsable de la edición es Eugénia Maria de Matos Martins da Graça Tomaz, autora de los materiales como Eugénia Graça.[^curso]
 
-Las **diez unidades** siguientes conservan el orden del programa público de FCUL de 2026/2027.[^programa] Los enlaces conducen a apartados desarrollados; las casillas expresan contenidos que deben poder explicarse o aplicarse, sin presuponer que ya se dominan. Las ampliaciones se identifican junto a la unidad correspondiente.
+Las **diez unidades** siguen el orden del programa público de FCUL para 2026/2027.[^programa] Cada enlace lleva al desarrollo del tema y cada casilla señala algo que conviene saber explicar o aplicar. Las ampliaciones aparecen junto a la unidad a la que corresponden.
 
-El **trabajo integrado de la asignatura es Laboratório Zuloc**: reúne un informe y una presentación. Sus [[Física/Grado/1º/Produção de Relatórios/Produção de Relatórios — índice de contenidos#Trabajo integrado — Laboratório Zuloc|requisitos de entrega]] permiten localizar directamente la [[Física/Grado/1º/Produção de Relatórios/03 Composición avanzada e índices en LaTeX#Aplicación — Componer y comprobar el informe Zuloc|estructura y simulación del informe]] y las [[Física/Grado/1º/Produção de Relatórios/05 Presentaciones científicas#Aplicación — Las cinco diapositivas del trabajo Zuloc|cinco diapositivas de la presentación]]. El trabajo representa el **35 %** de la evaluación, con mínimo 10 sobre 20; los tests o el examen representan el 65 %.[^zuloc][^evaluacion]
+El **trabajo integrado de la asignatura es Laboratório Zuloc**. Incluye un informe y una presentación. En [[Física/Grado/1º/Produção de Relatórios/Produção de Relatórios — índice de contenidos#Trabajo integrado — Laboratório Zuloc|sus requisitos de entrega]] encontrarás la [[Física/Grado/1º/Produção de Relatórios/03 Composición avanzada e índices en LaTeX#Aplicación — Componer y comprobar el informe Zuloc|estructura y la simulación del informe]] y las [[Física/Grado/1º/Produção de Relatórios/05 Presentaciones científicas#Aplicación — Las cinco diapositivas del trabajo Zuloc|cinco diapositivas de la presentación]]. El trabajo vale el **35 %** de la evaluación y exige un mínimo de 10 sobre 20. Los tests o el examen suman el 65 %.[^zuloc][^evaluacion]
 
 ## Base instrumental
 
@@ -36,10 +36,10 @@ El **trabajo integrado de la asignatura es Laboratório Zuloc**: reúne un infor
 
 ## 1. Organización de informes y textos científicos
 
-Programa: buenas prácticas independientes de la herramienta, corrección de la lengua, formato, imágenes, índices y estructura de documentos.[^programa]
+El programa incluye buenas prácticas que se aplican tanto en Word como en LaTeX: corrección lingüística, formato, imágenes, índices y estructura del documento.[^programa]
 
-* [ ] [[Física/Grado/1º/Produção de Relatórios/01 Informes y escritura científica#Informe científico|Organizar el informe como una relación entre pregunta, método, evidencia y conclusión]].
-* [ ] [[Física/Grado/1º/Produção de Relatórios/01 Informes y escritura científica#Método y reproducibilidad|Explicar qué información permite reconstruir el procedimiento]].
+* [ ] [[Física/Grado/1º/Produção de Relatórios/01 Informes y escritura científica#Informe científico|Explicar cómo se conectan la pregunta, el método, la evidencia y la conclusión]].
+* [ ] [[Física/Grado/1º/Produção de Relatórios/01 Informes y escritura científica#Método y reproducibilidad|Describir el procedimiento con detalle suficiente para que otra persona pueda reconstruirlo]].
 * [ ] [[Física/Grado/1º/Produção de Relatórios/01 Informes y escritura científica#Estructura de un informe breve|Distinguir introducción, método, resultados, discusión, conclusión y resumen]].
 * [ ] [[Física/Grado/1º/Produção de Relatórios/01 Informes y escritura científica#Preliminares y cuerpo del trabajo|Adaptar la estructura extensa docente: preliminares, trabajo relacionado, análisis, diseño, implementación, resultados, conclusión, anexos y bibliografía]].
 * [ ] [[Física/Grado/1º/Produção de Relatórios/01 Informes y escritura científica#Representar resultados con intención|Elegir entre tabla, figura y texto según la información que debe examinar el lector]].

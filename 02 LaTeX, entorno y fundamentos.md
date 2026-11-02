@@ -54,7 +54,7 @@ tags:
 > [!definicion] LaTeX
 > Sistema de preparación de documentos basado en macros de TeX, desarrollado inicialmente por Leslie Lamport. Proporciona órdenes de estructura y composición como secciones, ecuaciones y referencias.[^latex]
 
-Una macro permite invocar mediante un nombre una operación de composición. Así, `\section{Objetivo}` identifica una sección sin que el autor tenga que determinar de nuevo su numeración, tamaño y separación. La estructura declarada puede utilizarse después para generar un índice.[^texto]
+Una macro te evita repetir a mano una operación de composición. Por ejemplo, con `\section{Objetivo}` declaras una sección y LaTeX se ocupa de darle formato y numerarla. Al generar el índice, LaTeX recoge también ese encabezado.[^texto]
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -89,7 +89,7 @@ tags:
 
 
 
-Las diapositivas llaman «editor» a LaTeX en una explicación introductoria. La distinción técnica útil es entre el sistema de composición, el programa que procesa el documento y la aplicación donde se escribe.[^cap1]
+En las diapositivas se llama «editor» a LaTeX como simplificación para empezar. Conviene distinguir tres cosas: LaTeX es el sistema de composición, otro programa procesa el documento y una aplicación sirve para escribirlo.[^cap1]
 
 ### Editor
 
@@ -165,9 +165,9 @@ tags:
 > [!definicion] Compilación
 > Procesamiento del fuente y sus dependencias para producir el documento compuesto y los archivos auxiliares que requiere su construcción.[^instalacion][^estructuraexterna]
 
-Con `pdflatex`, la salida de lectura se produce directamente como PDF. La ruta tradicional procesa el fuente para obtener un DVI (*device independent*), que puede convertirse en PostScript con `dvips` o en PDF mediante herramientas de conversión. No es necesario recorrer todos esos formatos para producir un PDF.[^instalacion]
+Si ejecutas `pdflatex`, obtienes directamente un PDF para leer. En la ruta tradicional, el fuente produce un archivo DVI (*device independent*), que luego puede convertirse a PostScript con `dvips` o a PDF mediante otras herramientas. Para generar un PDF no hace falta pasar por todos esos formatos.[^instalacion]
 
-El resumen menciona `xdvi` para visualizar DVI y `gv` para PostScript. Son utilidades de una ruta de composición concreta; el visor PDF corresponde a otra salida. Una instalación se comprueba guardando un documento mínimo, ejecutando el procesador elegido desde el editor y verificando que aparece su salida. El programa seleccionado y el formato esperado deben corresponderse.[^instalacion]
+El resumen cita `xdvi` para abrir archivos DVI y `gv` para PostScript. Cada visor corresponde a una salida distinta; el PDF se abre con un visor de PDF. Para comprobar que la instalación funciona, guarda un documento mínimo, procésalo desde el editor y abre el archivo que se haya generado. Asegúrate de que el procesador y el formato esperado coincidan.[^instalacion]
 
 | Extensión | Función | Decisión que permite tomar |
 |---|---|---|
@@ -333,7 +333,7 @@ O polinómio $p(x)=x^2-1$ tem duas raízes reais.
 \end{document}
 ```
 
-La sección debe aparecer numerada y la igualdad, en una línea propia. La identidad se comprueba al desarrollar el producto. La compilación comprueba la sintaxis; la expansión algebraica comprueba el contenido matemático. Son dos revisiones necesarias y distintas.
+Al compilar, comprueba que la sección lleva número y que la igualdad aparece en su propia línea. Después desarrolla el producto para confirmar la identidad. La compilación detecta problemas de sintaxis, pero no valida las matemáticas: esa revisión requiere comprobar la igualdad por separado.
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -368,9 +368,9 @@ tags:
 > [!definicion] Orden de LaTeX
 > Instrucción iniciada por una barra inversa. Puede tener un nombre de letras, como `\section`, o estar formada por una barra y un símbolo, como `\%`. Sus argumentos determinan sobre qué actúa.[^texto][^estructuraexterna]
 
-Las mayúsculas importan: `\large`, `\Large` y `\LARGE` son órdenes diferentes. Cambiar la capitalización puede producir otro tamaño o un nombre que el sistema no reconoce.[^texto]
+Fíjate en las mayúsculas: `\large`, `\Large` y `\LARGE` son órdenes distintas. Si cambias una letra, puedes obtener otro tamaño o una orden que LaTeX no reconoce.[^texto]
 
-Después de una orden cuyo nombre está formado por letras, un espacio separa el nombre del texto, pero normalmente no se imprime. Para escribir «LaTeX permite», sirve `\LaTeX{} permite`: el grupo vacío termina la orden y deja que el espacio siguiente se conserve.[^texto]
+Después de una orden formada por letras, LaTeX consume el espacio que escribes a continuación y normalmente no lo imprime. Para separar la marca de «LaTeX» de la palabra siguiente, escribe `\LaTeX{} permite`: el grupo vacío cierra la orden y el espacio posterior sí aparece.[^texto]
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -443,7 +443,7 @@ tags:
 > [!definicion] Entorno
 > Construcción delimitada por `\begin{nombre}` y `\end{nombre}` que aplica una estructura o unas reglas a su contenido.[^texto]
 
-Los cierres deben respetar el orden de apertura. Si se abre una lista dentro de otra, se cierra primero la interior. Un paquete aporta funcionalidades; un entorno usa una estructura dentro del cuerpo. `\usepackage` y `\begin` cumplen, por tanto, funciones diferentes.
+Cierra los entornos en el orden inverso al que los abriste: si una lista contiene otra, termina primero la lista interior. Tampoco confundas un paquete con un entorno. `\usepackage` carga herramientas; `\begin` inicia una estructura dentro del cuerpo del documento.
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -514,7 +514,7 @@ tags:
 > Introduce un espacio que impide separar ambos fragmentos por un salto de línea.
 ```
 
-Por ejemplo, `A eficiência foi 95\%.` imprime el porcentaje. Escribir `95%` comenta el resto de esa línea del fuente; puede desaparecer texto o incluso una orden de cierre. El comentario es útil para anotar el fuente sin incorporarlo al PDF.[^estructuraexterna]
+En `A eficiência foi 95\%.` la barra invertida hace que se imprima el signo de porcentaje. Si escribes `95%` sin ella, LaTeX tratará el resto de la línea como comentario; podrías ocultar texto o incluso una orden de cierre. Ese mismo carácter sirve para dejar notas en el fuente que no aparecerán en el PDF.[^estructuraexterna]
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -567,7 +567,7 @@ tags:
 | `sciposter` | Pósteres. |
 | `moderncv` | Currículos. |
 
-La lista docente escribe `slide` para transparencias; la clase estándar correspondiente se llama **`slides`**. La clase de presentación desarrollada con ejemplos específicos es `beamer`.[^texto][^clases]
+La lista docente menciona `slide` como clase para transparencias, pero la clase estándar se llama **`slides`**. Los ejemplos específicos de presentaciones del curso usan `beamer`.[^texto][^clases]
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -632,7 +632,7 @@ tags:
 > [!definicion] Paquete
 > Extensión cargada con `\usepackage[opciones]{nombre}` que añade órdenes o modifica capacidades de composición.[^texto]
 
-Se carga una funcionalidad cuando se necesita: `amsmath` amplía la composición matemática, `amssymb` aporta símbolos, `graphicx` permite incorporar imágenes y `eurosym` proporciona `\euro`. Después de `\usepackage{eurosym}`, `10~\euro` compone una cantidad seguida del símbolo monetario sin separar ambos por un salto de línea.[^texto]
+Carga solo los paquetes que vayas a usar. `amsmath` amplía la composición matemática; `amssymb` añade símbolos; `graphicx` sirve para insertar imágenes y `eurosym` ofrece `\euro`. Con `\usepackage{eurosym}`, escribe `10~\euro` para mantener juntos la cantidad y el símbolo del euro al final de la línea.[^texto]
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -667,7 +667,7 @@ tags:
 > [!definicion] Configuración de lengua
 > Selección de reglas lingüísticas de composición, como nombres automáticos y partición de palabras. En el material se realiza con `\usepackage[portuguese]{babel}`.[^texto]
 
-Con esa configuración, los rótulos automáticos y la separación de palabras siguen las reglas portuguesas. Si una palabra necesita una partición particular, `\hyphenation{com-po-si-ção}` declara puntos de corte permitidos; los guiones de la declaración indican posiciones posibles y no se imprimen dentro de la palabra.[^texto]
+Con esa configuración, los rótulos automáticos y la separación de palabras siguen las reglas portuguesas. Si una palabra necesita una división especial, escribe `\hyphenation{com-po-si-ção}` para indicar por dónde puede cortarse. Los guiones señalan los puntos de corte; no se imprimen en la palabra.[^texto]
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -700,7 +700,7 @@ tags:
 > [!definicion] Codificación de entrada
 > Regla que relaciona los bytes del archivo con los caracteres escritos. La configuración de entrada debe corresponder a la codificación con que se guardó el fuente.[^texto][^estructuraexterna]
 
-La **codificación de entrada** determina cómo se interpretan los caracteres guardados; la lengua seleccionada determina otras reglas de composición. Para un archivo UTF-8 procesado con `pdflatex`, se usa, si se declara, `\usepackage[utf8]{inputenc}`. No se seleccionan simultáneamente Latin1 y UTF-8 como si fuesen dos lenguas. Las instalaciones modernas de LaTeX usan UTF-8 como entrada predeterminada.[^texto][^estructuraexterna]
+La **codificación de entrada** indica cómo leer los caracteres del archivo; la lengua seleccionada configura otras reglas de composición. Si usas `pdflatex` con un archivo UTF-8, puedes declarar `\usepackage[utf8]{inputenc}` cuando haga falta. No combines Latin1 y UTF-8: son codificaciones distintas, no dos idiomas. En las instalaciones modernas de LaTeX, UTF-8 suele ser la opción predeterminada.[^texto][^estructuraexterna]
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -844,7 +844,7 @@ Texto da secção.
 \end{document}
 ```
 
-Se comprueba la numeración en el PDF después de compilar. Cambiar sólo el aspecto de un título no produce esta jerarquía.
+Después de compilar, mira el PDF y comprueba que los títulos tienen la numeración esperada. Poner un título en otro tamaño o en negrita no crea por sí solo esa jerarquía.
 
 
 
@@ -853,7 +853,7 @@ Se comprueba la numeración en el PDF después de compilar. Cambiar sólo el asp
 > [!definicion] Párrafo en el fuente
 > Bloque de texto separado del siguiente por una línea en blanco o por `\par`. Un salto simple de línea en el fuente suele equivaler a un espacio.[^estructuraexterna]
 
-`\\` y `\newline` fuerzan un salto de línea en contextos apropiados, pero no crean por sí mismos un nuevo párrafo. La línea en blanco expresa una unidad de discurso nueva. `\noindent` suprime la sangría inicial del párrafo al que se aplica; no modifica su significado.[^texto]
+`\\` y `\newline` fuerzan un salto de línea en los contextos adecuados, pero no empiezan un párrafo nuevo. Para separar dos párrafos, deja una línea en blanco. `\noindent` quita la sangría inicial del párrafo al que se aplica; no cambia su contenido.[^texto]
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -920,11 +920,11 @@ tags:
 > [!definicion] Estilo tipográfico
 > Cambio de forma o énfasis de un fragmento sin alterar su nivel estructural.[^texto]
 
-`\textbf{...}` produce negrita; `\textit{...}`, cursiva; `\emph{...}`, énfasis contextual; `\texttt{...}`, tipo monoespaciado; `\textsc{...}`, versalitas, y `\underline{...}`, subrayado. Las órdenes `\uuline` y `\sout` requieren `ulem`; `\usepackage[normalem]{ulem}` conserva el comportamiento habitual de `\emph`.[^texto]
+Con `\textbf{...}` escribes en negrita; `\textit{...}` aplica cursiva; `\emph{...}` marca énfasis según el contexto; `\texttt{...}` usa letra monoespaciada; `\textsc{...}` crea versalitas y `\underline{...}` subraya. Para `\uuline` y `\sout` necesitas cargar `ulem`. Si usas `\usepackage[normalem]{ulem}`, `\emph` conserva su comportamiento habitual.[^texto]
 
-Las versalitas son letras con forma de mayúscula y distinta altura según su función; `\textsc` no equivale a convertir todos los caracteres a mayúsculas del mismo tamaño. `\textbullet` imprime una viñeta aislada; para una lista de elementos se usa `itemize`.[^texto]
+Las versalitas parecen mayúsculas, pero mantienen alturas distintas según la letra; `\textsc` no convierte todo a mayúsculas del mismo tamaño. `\textbullet` imprime una viñeta suelta. Para enumerar varios elementos, usa `itemize`.[^texto]
 
-El material usa también declaraciones antiguas como `\bf` o `\tt`. Es preferible reconocer su función y escribir formas actuales como `{\bfseries Texto}` y `\texttt{código}`. Las llaves impiden que una declaración se extienda al contenido posterior.
+El material también muestra declaraciones antiguas como `\bf` y `\tt`. Reconoce qué hacen y, al escribir código nuevo, usa formas actuales como `{\bfseries Texto}` y `\texttt{código}`. Las llaves limitan el efecto de la declaración al texto que encierran.
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -1075,9 +1075,9 @@ tags:
 > [!definicion] Espaciado explícito
 > Inserción de una separación tipográfica mediante una orden, en lugar de repetir espacios del teclado.[^texto]
 
-En matemáticas, `\,`, `\:`, `\;`, `\quad` y `\qquad` proporcionan separaciones de anchura creciente; `\!` reduce espacio. `\hspace{1cm}` y `\vspace{3mm}` introducen separaciones horizontales y verticales con una dimensión. El material incluye las órdenes de TeX `\hskip` y `\vskip`; las formas con argumento entre llaves hacen más visible el alcance al leer el fuente.[^texto]
+En modo matemático, `\,`, `\:`, `\;`, `\quad` y `\qquad` separan cada vez más; `\!` reduce el espacio. Para fijar una longitud puedes usar `\hspace{1cm}` o `\vspace{3mm}`. El material también incluye las órdenes de TeX `\hskip` y `\vskip`; al leer el fuente, las versiones con un argumento entre llaves dejan más claro cuánto texto abarca el ajuste.[^texto]
 
-Los nombres `\thinspace`, `\medspace` y `\thickspace` corresponden a las separaciones fina, media y gruesa. En una fórmula, `a\,b`, `a\:b` y `a\;b` permiten comparar esos tres intervalos. El espacio negativo aproxima dos signos: `\int\!\int_D` reduce la separación entre integrales respecto a `\int\int_D`. El ejemplo compara composición; no establece un valor para la integral.[^texto]
+`\thinspace`, `\medspace` y `\thickspace` nombran espacios fino, medio y grueso. Puedes compararlos en una fórmula con `a\,b`, `a\:b` y `a\;b`. El espacio negativo acerca dos signos: `\int\!\int_D` deja menos espacio entre las integrales que `\int\int_D`. Aquí se compara la composición tipográfica, no se calcula la integral.[^texto]
 
 Estas órdenes ajustan composición. No se usan para reconstruir a mano columnas, listas o alineaciones que ya tienen entornos propios.
 
@@ -1929,17 +1929,17 @@ El documento ya puede expresar texto y fórmulas elementales. Al crecer, aparece
 
 Tutoriza Produção de Relatórios a nivel universitario introductorio. Formula una pregunta por turno y espera el intento antes de ofrecer pistas o soluciones. Distingue errores de sintaxis, agrupación, elección de estructura y significado matemático.
 
-TeX compone; LaTeX proporciona macros y estructuras; TeX Live distribuye programas y paquetes; Texmaker edita. El fuente `.tex` se procesa a PDF; `.log` registra mensajes, `.aux` auxilia referencias y `.toc` contiene el índice. Existe la ruta tradicional DVI → PS/PDF.
+Pídele que explique con sus palabras qué hace cada herramienta: TeX compone, LaTeX ofrece macros y estructuras, TeX Live distribuye programas y paquetes, y Texmaker permite editar el fuente. Sigue el recorrido de un archivo `.tex` hasta el PDF y pregunta para qué sirven `.log` (mensajes), `.aux` (referencias) y `.toc` (índice). Menciona también la ruta antigua DVI → PS/PDF.
 
-El preámbulo configura clase y paquetes y el cuerpo queda entre begin y end de document.
+Repasad la forma de un documento: la clase y los paquetes se declaran en el preámbulo; el contenido va entre \begin{document} y \end{document}.
 
-Órdenes sensibles a mayúsculas, argumentos obligatorios en llaves y opcionales en corchetes; los grupos limitan declaraciones.
+Haz que reconozca que LaTeX distingue mayúsculas y minúsculas, que los argumentos obligatorios van entre llaves y los opcionales entre corchetes, y que un grupo limita el efecto de una declaración.
 
-Revisa caracteres especiales y comentarios: `%` elimina el resto de la línea; `\%` imprime el porcentaje. Un grupo limita declaraciones, mientras un argumento entrega contenido a una orden. Una línea en blanco o `\par` inicia párrafo; `\\` fuerza un cambio de línea en un contexto apropiado.
+Incluye un ejercicio con caracteres especiales y comentarios: `%` oculta el resto de la línea, mientras que `\%` imprime el signo de porcentaje. Compara un grupo, que limita una declaración, con un argumento, que entrega contenido a una orden. Pregunta también qué inicia un párrafo —una línea en blanco o `\par`— y qué hace `\\` en los contextos donde se admite: fuerza un salto de línea.
 
-`article` organiza secciones y `report` incorpora capítulos. Usa UTF-8 coherente y babel portuguese para lengua. Distingue párrafo de salto de línea, estilo de estructura y tres listas: itemize sin orden, enumerate ordenada, description etiqueta-explicación. Notas con footnote.
+Compara las clases `article`, que organiza secciones, y `report`, que también permite capítulos. Repasa el uso coherente de UTF-8 y `babel portuguese`. Después contrasta un párrafo con un simple salto de línea, el formato con la estructura del documento y los tres tipos de lista: `itemize` para elementos sin orden, `enumerate` para pasos numerados y `description` para pares de etiqueta y explicación. Añade una nota al pie con `\footnote`.
 
-Las fórmulas en línea usan dólares o el entorno `math`; `displaymath` destaca sin número, `equation` numera y `equation*` con `amsmath` no. Subíndices y exponentes de varios símbolos requieren llaves. Examina `frac`, `dfrac`, `sqrt`, `left/right`, tamaños manuales de delimitadores, operadores, `text`, `int`, `sum`, `lim` y `binom`. La expresión $1/(1-x^2)$ exige $x\ne\pm1$; compilar no comprueba ese dominio.
+Pide que escriba fórmulas breves dentro de una oración y otras en una línea destacada. Compara los dólares o el entorno `math` con `displaymath`, que no numera, `equation`, que sí numera, y `equation*` de `amsmath`, que no lleva número. Si un subíndice o un exponente contiene varios símbolos, recuérdale encerrarlos entre llaves. Repasa `frac`, `dfrac`, `sqrt`, `left/right`, los tamaños manuales de delimitadores, operadores, `text`, `int`, `sum`, `lim` y `binom`. La expresión $1/(1-x^2)$ requiere $x\ne\pm1$: LaTeX puede componerla aunque no se cumpla esa condición matemática.
 
 Pide reparar x^12, porcentaje sin escapar y cierre de document ausente; adaptar article a report; escribir una lista y una fórmula. Distingue error de sintaxis, agrupación, procedimiento y significado.
 

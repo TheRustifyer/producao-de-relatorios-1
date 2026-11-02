@@ -56,7 +56,7 @@ tags:
 > [!definicion] Estructura de afirmación y evidencia
 > Diseño en el que un título expresa la idea central del marco y el contenido visual aporta la evidencia que permite examinarla.[^cmu]
 
-«Resultados» nombra una categoría, pero no señala qué resultado importa. «El período medido aumenta entre las condiciones comparadas» dirige la atención hacia una relación concreta, siempre que los datos y su análisis la sostengan. El título no debe afirmar causalidad, exactitud o universalidad si el trabajo sólo ha establecido una comparación limitada.
+«Resultados» no le dice al público qué hallazgo quieres que recuerde. En cambio, «El período medido aumenta entre las condiciones comparadas» anuncia una relación concreta, si los datos y su análisis la respaldan. No conviertas esa comparación en una afirmación causal, exacta o universal si el trabajo no llega tan lejos.
 
 ```anki
 deck: Física::Produção de Relatórios::Presentaciones
@@ -86,9 +86,9 @@ tags:
 
 #### Ejemplo — Transformar veinte medidas en apoyo visual
 
-La tarea es comunicar una tendencia durante una intervención breve. Una tabla de veinte filas conserva los valores, pero obliga a buscarlos uno a uno. Si la conclusión depende de una relación entre variables, una gráfica con ejes y unidades permite inspeccionar esa pauta; si depende de un valor preciso, puede bastar destacar ese valor y su incertidumbre.
+En una intervención breve, el público debe captar la tendencia sin ponerse a recorrer veinte filas. Deja la tabla completa en el informe y usa una gráfica con ejes y unidades si importa la relación entre variables. Si la conclusión depende de un solo valor, destaca ese dato y su incertidumbre.
 
-La tabla completa permanece disponible en el informe. La exposición explica las condiciones de medida y cómo se obtuvo el resultado mostrado. La transformación conserva el contenido necesario para evaluar la afirmación, en lugar de transferir al público toda la tarea de análisis.[^cmu][^harvard]
+La tabla completa puede consultarse en el informe. En la exposición, cuenta en qué condiciones mediste y cómo obtuviste el resultado que muestras. Resume el análisis lo suficiente para que el público pueda valorar tu afirmación sin tener que hacerlo desde cero.[^cmu][^harvard]
 
 ```anki
 deck: Física::Produção de Relatórios::Presentaciones
@@ -156,7 +156,7 @@ tags:
 > [!definicion] Guion de exposición
 > Secuencia de mensajes y transiciones que organiza qué debe comprender el público y cómo se llega a la conclusión.[^harvard]
 
-El ensayo comprueba si la cantidad de contenido corresponde al tiempo. Se registra dónde una figura necesita más explicación o una transición exige contexto. Si sobra material, se prioriza la evidencia indispensable para la conclusión y se reserva el detalle para preguntas o apoyo complementario. El número de diapositivas por minuto sólo orienta; una ecuación que requiere interpretación y una portada no consumen la misma atención.
+Ensaya con el tiempo que tendrás. Anota qué figura necesita más explicación y dónde una transición resulta brusca. Si no cabe todo, conserva la evidencia necesaria para la conclusión y deja los detalles para las preguntas o el material de apoyo. Las diapositivas por minuto son solo una orientación: una ecuación difícil de explicar y una portada no exigen la misma atención.
 
 ```anki
 deck: Física::Produção de Relatórios::Presentaciones
@@ -186,14 +186,14 @@ tags:
 
 #### Ejemplo — Corregir una transición ausente
 
-Después de presentar el montaje, aparece una gráfica con una variable transformada que aún no se ha definido. El público puede leer los ejes, pero desconoce por qué se eligieron. La reparación consiste en explicar la transformación y la pregunta que permite examinar antes de interpretar la tendencia. Añadir más cifras a la gráfica no resuelve ese salto del argumento.
+Imagina que, tras enseñar el montaje, aparece una gráfica con una variable transformada que todavía no has definido. El público puede leer los ejes, pero no sabe por qué elegiste esa transformación. Antes de interpretar la tendencia, explica qué hiciste con los datos y qué pregunta te permite responder. Llenar la gráfica con más cifras no arreglará ese salto.
 
 ### Fuentes en diapositivas
 
 > [!definicion] Atribución visual
 > Identificación legible del origen de los datos, imágenes o ideas empleados en una diapositiva, situada junto al elemento o en una posición que permita reconocer la relación.[^harvard]
 
-La selección de una imagen mantiene la responsabilidad sobre su uso y procedencia. Una referencia abreviada puede acompañarla y una diapositiva de referencias proporcionar los datos completos. Se comprueba que el público pueda distinguir evidencia propia y material ajeno; los permisos y la integridad se desarrollan en [[Física/Grado/1º/Produção de Relatórios/06 Ética y uso académico de las TIC|ética y uso académico de las TIC]].
+Antes de incluir una imagen, averigua de dónde procede y qué uso permite su licencia. Puedes poner una atribución breve junto a ella y reunir los datos completos en una diapositiva de referencias. Deja claro qué evidencia has producido tú y qué material pertenece a otras personas. Para los permisos y la integridad académica, consulta [[Física/Grado/1º/Produção de Relatórios/06 Ética y uso académico de las TIC|ética y uso académico de las TIC]].
 
 ```anki
 deck: Física::Produção de Relatórios::Presentaciones
@@ -235,7 +235,7 @@ tags:
 > [!definicion] Frame o marco
 > Unidad de contenido delimitada por `\begin{frame}` y `\end{frame}`. Puede producir una o varias diapositivas del PDF, según sus opciones y su forma de presentación.[^docente][^beamer]
 
-Un marco simple produce normalmente una diapositiva. La opción `allowframebreaks`, desarrollada más abajo, puede repartirlo en varias. Por eso el número de entornos `frame` no determina siempre el número de páginas del PDF.
+Un entorno `frame` suele producir una diapositiva. Si activas `allowframebreaks`, su contenido puede continuar en varias páginas; por eso el número de entornos no siempre coincide con el número de diapositivas del PDF.
 
 ```anki
 deck: Física::Produção de Relatórios::Presentaciones
@@ -267,7 +267,7 @@ El título declara una idea que organiza el contenido. La orden sólo fija la co
 \end{frame}
 ```
 
-Ambas formas producen un encabezado del marco. En la segunda, la orden `\frametitle` permite localizar por separado la declaración del título y el contenido.[^docente]
+Las dos formas crean el título del marco. Con `\frametitle`, el título aparece en una orden separada del contenido, lo que puede facilitar la lectura del fuente.[^docente]
 
 ```anki
 deck: Física::Produção de Relatórios::Presentaciones
@@ -300,7 +300,7 @@ tags:
 > [!definicion] Portada Beamer
 > Marco que presenta los datos declarados con `\title`, `\author`, `\institute` y `\date`, mediante `\titlepage`.[^docente][^beamer]
 
-Los datos se configuran en el preámbulo y se imprimen en un marco. `\institute` pertenece a Beamer y permite identificar la institución; esa disponibilidad no se traslada automáticamente a `article` o `report`.
+Declara esos datos en el preámbulo y usa el marco para mostrarlos. `\institute` es una orden de Beamer para identificar la institución; no está disponible automáticamente en las clases `article` o `report`.
 
 ```anki
 deck: Física::Produção de Relatórios::Presentaciones
@@ -394,7 +394,7 @@ El objetivo es producir una portada, un índice y dos marcos con funciones difer
 \end{document}
 ```
 
-La portada identifica; el índice orienta; el primer marco explica una decisión; el segundo muestra tres valores legibles. El PDF debe revisarse tras las compilaciones que estabilicen el índice. En un trabajo real, se sustituye la tabla ilustrativa por evidencia suficiente, y se añade su interpretación y conclusión.
+La portada identifica el trabajo y el índice ayuda a orientarse. El primer marco explica una decisión; el segundo presenta tres valores que se leen con claridad. Revisa el PDF después de las compilaciones necesarias para actualizar el índice. En un trabajo real, sustituye la tabla ilustrativa por datos suficientes y explica qué significan antes de presentar la conclusión.
 
 ## Apariencia y opciones de marcos
 
@@ -403,7 +403,7 @@ La portada identifica; el índice orienta; el primer marco explica una decisión
 > [!definicion] Tema Beamer
 > Conjunto de decisiones de apariencia y navegación seleccionado mediante `\usetheme{nombre}`.[^docente]
 
-El resumen ejemplifica `CambridgeUS` y enumera temas como `Madrid`, `Berlin`, `Berkeley`, `Warsaw`, `Singapore` y `Copenhagen`. El nombre debe corresponder a un tema instalado y distinguir mayúsculas. Cambiar el tema conserva las secciones y el contenido, pero puede modificar el espacio útil y la navegación; se revisan los marcos afectados.
+El resumen muestra `CambridgeUS` y menciona otros temas: `Madrid`, `Berlin`, `Berkeley`, `Warsaw`, `Singapore` y `Copenhagen`. Comprueba que el nombre que escribas corresponda a un tema instalado y respete las mayúsculas. Al cambiarlo, las secciones y el contenido siguen ahí, pero puede variar el espacio disponible y la navegación; vuelve a revisar los marcos afectados.
 
 El capítulo de presentaciones recoge este catálogo. Se conservan sus nombres válidos y se corrigen «Cambridge» a `CambridgeUS` y «Berlim» a `Berlin`:[^cap5][^beamer]
 
@@ -472,7 +472,7 @@ Una línea corta no necesita dividirse por el hecho de activar la opción. Cuand
 \end{frame}
 ```
 
-El resultado esperado son dos diapositivas de continuación. Un marco de contenido suficientemente largo puede dividirse automáticamente; el corte explícito de este ejemplo permite comprobar la diferencia entre contar marcos y contar páginas sin depender de una cantidad aproximada de texto.
+El PDF debe mostrar dos diapositivas de continuación. Beamer puede dividir automáticamente un marco muy largo; el corte explícito de este ejemplo deja ver la diferencia entre contar entornos `frame` y contar las páginas resultantes.
 
 ```anki
 deck: Física::Produção de Relatórios::Presentaciones
@@ -500,7 +500,7 @@ tags:
 \end{frame}
 ```
 
-Se muestra la orden en lugar de ejecutarla como seccionado de la presentación. El cierre `\end{frame}` se mantiene en su propia línea. El mismo cuidado corresponde al incluir listados de programa: el contenido literal cambia la manera de procesar el marco, aunque su apariencia parezca un bloque de texto sencillo.
+En este ejemplo la orden aparece escrita para que puedas verla; no divide realmente la presentación. Deja `\end{frame}` en su propia línea. Al incluir código ocurre algo parecido: el contenido literal obliga a procesar el marco de otra manera, aunque en la diapositiva parezca un bloque de texto corriente.
 
 ```anki
 deck: Física::Produção de Relatórios::Presentaciones
@@ -530,7 +530,7 @@ tags:
 
 ## Aplicación — Las cinco diapositivas del trabajo Zuloc
 
-El trabajo integrado de Zuloc incluye un informe y una presentación de **cinco diapositivas**. La secuencia está fijada por el enunciado y cada página debe cumplir una función concreta:[^zuloc]
+El trabajo de Zuloc incluye un informe y una presentación de **cinco diapositivas**. El enunciado fija el orden y asigna una tarea concreta a cada página:[^zuloc]
 
 | Diapositiva | Contenido exigido | Comprobación |
 |---:|---|---|
@@ -540,7 +540,7 @@ El trabajo integrado de Zuloc incluye un informe y una presentación de **cinco 
 | 4 | Número de trabajadores elegido y justificación. | Explica por qué mediante cifras y recursos visuales, sin texto corrido. |
 | 5 | Imagen relativa al tema y sitio del que se obtuvo. | Permite identificar tanto la imagen como su procedencia. |
 
-El fondo no puede ser completamente blanco. Todas las diapositivas llevan título; en la portada se utiliza el título del trabajo. Una configuración posible, ajustable al contraste requerido, es:[^zuloc][^beamer]
+El fondo no puede ser completamente blanco y todas las diapositivas deben llevar título; en la portada se usa el título del trabajo. Esta es una posible configuración, que todavía debe revisarse para asegurar el contraste:[^zuloc][^beamer]
 
 ```latex
 % Preámbulo Beamer
@@ -600,7 +600,7 @@ tags:
 
 ### Ambigüedad de la versión B
 
-El enunciado permite omitir B si la plantilla inicial ya resulta adecuada, pero exige su tabla y gráfico en las diapositivas 2 y 3. Ambas instrucciones permanecen en conflicto. Además, la serie aleatoria del Word utilizada en B no está entre los materiales disponibles. La preparación de la presentación requiere identificar qué versión de los resultados se considera válida; los datos ausentes no se sustituyen por una serie inventada.[^zuloc]
+El enunciado dice que se puede omitir B si la plantilla inicial ya es adecuada, pero también pide incluir su tabla y su gráfico en las diapositivas 2 y 3. Las dos instrucciones se contradicen. Además, no está disponible el archivo Word con la serie aleatoria de B. Antes de preparar esa parte, habría que saber qué versión de los resultados se considera válida; no se deben inventar los datos que faltan.[^zuloc]
 
 ## Práctica con soluciones razonadas
 
@@ -628,7 +628,7 @@ El enunciado permite omitir B si la plantilla inicial ya resulta adecuada, pero 
 > [!resolucion]- Resolución
 > Se añade `[fragile]` para permitir el contenido literal y se comprueban sus cierres. Después se separan los mensajes que necesitan evidencia e interpretación propias. La selección se ensaya con el tiempo disponible; reducir la letra hasta que quepa la lista no resuelve la dificultad de seguir el argumento.
 
-Una presentación conserva la exigencia de atribuir y justificar lo que comunica. El uso de imágenes, datos y herramientas conduce a [[Física/Grado/1º/Produção de Relatórios/06 Ética y uso académico de las TIC|los principios de integridad académica]], que afectan tanto a una exposición como a su informe de apoyo.
+En una presentación también hay que atribuir las fuentes y respaldar lo que se afirma. Las imágenes, los datos y las herramientas plantean cuestiones de [[Física/Grado/1º/Produção de Relatórios/06 Ética y uso académico de las TIC|integridad académica]], tanto en las diapositivas como en el informe que las acompaña.
 
 ## 📚 Fuentes
 
@@ -646,25 +646,25 @@ Una presentación conserva la exigencia de atribuir y justificar lo que comunica
 
 ## 🧑‍🏫 Prompt para tutor conversacional
 
-Tutoriza a nivel universitario introductorio con una pregunta por turno y espera la respuesta.
+Guía al estudiante como en una tutoría de primer curso universitario. Haz una pregunta cada vez y espera su respuesta antes de continuar.
 
-Una presentación comunica pregunta→método esencial→evidencia→interpretación→límite.
+Ayúdale a ordenar el argumento de la presentación: empieza por la pregunta, explica solo el método necesario, muestra la evidencia, interprétala y termina indicando sus límites.
 
-El título debe expresar un mensaje defendible y la imagen, gráfica o tabla permitir evaluarlo; la voz explica decisiones y límites. La jerarquía visual ordena título, evidencia y atribución; comprueba ejes, unidades, contraste y lectura a distancia. El ensayo ajusta contenido al tiempo y al público.
+Pídele que proponga un título que exprese un mensaje respaldado por el trabajo y que elija una imagen, gráfica o tabla que permita examinarlo. La voz debe explicar las decisiones y los límites. En cada diapositiva, ayúdale a ordenar título, evidencia y atribución; comprobad juntos los ejes, las unidades, el contraste y la lectura a distancia. Ensayad con el tiempo y el público previstos.
 
-Beamer es una clase LaTeX: documentclass[11pt]{beamer}; frame delimita contenido y puede producir una o varias diapositivas.
+Recuerda que Beamer es una clase de LaTeX. El documento empieza, por ejemplo, con \documentclass[11pt]{beamer}. El entorno frame delimita su contenido y, si se configura para continuar, puede generar más de una diapositiva.
 
-Title/author/institute/date preparan portada con titlepage; section organiza y tableofcontents recoge las partes.
+Para preparar la portada, repasa title, author, institute, date y titlepage. Section organiza la presentación y tableofcontents muestra sus partes.
 
-Usetheme elige aspecto y usecolortheme colores; CambridgeUS y dolphin son ejemplos. `\frametitle` o argumento de frame fija título.
+Explica que usetheme cambia el tema visual y usecolortheme el tema de color; CambridgeUS y dolphin son ejemplos. El título del marco se declara con frametitle o como argumento de frame.
 
-Allowframebreaks reparte un marco largo; fragile permite verbatim y código literal.
+Si el contenido de un marco es largo, allowframebreaks puede repartirlo entre varias diapositivas. Para incluir verbatim o código literal, añade la opción fragile al marco.
 
-El trabajo Zuloc exige cinco páginas: portada, tabla B, gráfico B, elección de plantilla sin texto corrido e imagen con sitio de procedencia. El fondo no puede ser totalmente blanco y cada página lleva título. Cuenta páginas finales, no sólo marcos; conserva las fuentes junto a sus elementos. El informe permite omitir B bajo una condición, mientras la presentación exige B: identifica esa ambigüedad y la serie del Word no aportada, sin inventar resultados.
+Usa el trabajo Zuloc como ejercicio final. Pide las cinco diapositivas que exige: portada, tabla B, gráfico B, elección de plantilla sin texto corrido e imagen con el sitio de procedencia. El fondo no debe ser completamente blanco y cada diapositiva necesita un título. Contad las páginas finales del PDF, no solo los marcos, y dejad las fuentes junto a los elementos a los que corresponden. Señala que el informe permite omitir B bajo una condición, mientras que la presentación la exige, y que falta la serie del archivo Word. No inventes resultados.
 
-Usa tres valores ficticios de período 1,40; 1,44 y 1,42 segundos para elegir una representación, sin tratarlos como evidencia real.
+Para practicar la elección de una representación, usa tres períodos ficticios: 1,40; 1,44 y 1,42 segundos. Deja claro que son un ejemplo, no evidencia experimental real.
 
-Pide corregir un título excesivo, distinguir marco de diapositiva y reparar un verbatim sin fragile. Distingue errores técnicos, de evidencia, de secuencia y de legibilidad; practica con pistas, recuperación activa y repetición espaciada.
+Pídele que revise un título que afirma más de lo que muestran los datos, que distinga un marco de una diapositiva y que repare un entorno verbatim al que le falta fragile. Cuando corrijas, separa los problemas técnicos de los de evidencia, secuencia y legibilidad. Usa pistas, recuperación activa y repetición espaciada.
 
 Continúa con autoría, privacidad y uso de materiales.
 

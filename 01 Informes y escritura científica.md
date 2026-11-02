@@ -52,7 +52,7 @@ tags:
 
 ### Elegir la estructura según el trabajo
 
-Un experimento organiza medidas y su interpretación; una revisión compara fuentes; un proyecto puede separar análisis, diseño e implementación. La estructura debe hacer visibles las operaciones que permiten responder a la pregunta del trabajo. El esquema extenso presentado por la profesora y la estructura habitual de un informe experimental responden a necesidades diferentes.[^estructura][^sheffield]
+El informe de un experimento suele separar las medidas de su interpretación; una revisión compara fuentes, y un proyecto puede dedicar capítulos al análisis, al diseño y a la implementación. El esquema dependerá de lo que haya que hacer para responder a la pregunta. Por eso, la pauta extensa de la profesora y la estructura breve de un informe experimental no son intercambiables: cada una da espacio a tareas distintas.[^estructura][^sheffield]
 
 > [!procedimiento] Elección de estructura
 > 1. Formular qué pregunta debe responder el informe.
@@ -62,11 +62,11 @@ Un experimento organiza medidas y su interpretación; una revisión compara fuen
 
 #### Ejemplo — Convertir una actividad en una pregunta
 
-**Tarea.** Se ha realizado una práctica con un péndulo. Elige un título informativo en dos casos: a) se repite la medida del período a una misma longitud; b) se comparan medidas tomadas a distintas longitudes.
+**Tarea.** Imagina que acabas de medir el período de un péndulo. Propón un título informativo para cada caso: a) repites la medida manteniendo la longitud; b) comparas medidas tomadas con longitudes distintas.
 
-«Práctica 1» identifica la entrega, pero deja sin precisar el objeto estudiado. En el caso a), **«Medición repetida del período de un péndulo»** describe las operaciones realizadas. En el caso b), **«Variación del período medido con la longitud del péndulo»** anuncia la relación examinada.
+«Práctica 1» dice cuál es la entrega, pero no qué estudiaste. Para el caso a), **«Medición repetida del período de un péndulo»** cuenta con claridad qué hiciste. Para el b), **«Variación del período medido con la longitud del péndulo»** deja ver qué relación comparaste.
 
-La comprobación consiste en contrastar el título con los datos: cinco medidas a una misma longitud permiten examinar la repetición y dispersión en esa condición. Para estudiar una dependencia con la longitud hacen falta medidas a distintas longitudes. ==El objetivo y el título deben corresponder al trabajo efectivamente realizado.==[^sheffield]
+Comprueba el título mirando los datos. Cinco medidas tomadas con la misma longitud muestran cuánto varían las repeticiones en esa condición; para averiguar cómo influye la longitud en el período, necesitas medir con longitudes distintas. ==El título debe decir qué hiciste realmente.==[^sheffield]
 
 ```anki
 deck: Física::Produção de Relatórios::Informes
@@ -96,14 +96,14 @@ tags:
 
 ### Método y reproducibilidad
 
-Una cifra aislada deja sin explicar cómo se obtuvo. Otra persona necesita conocer las operaciones relevantes para juzgar el resultado y reconstruir el procedimiento.[^icmje]
+Un resultado pierde contexto si aparece como una cifra suelta. Para valorar de dónde salió, el lector necesita saber qué operaciones se hicieron y en qué condiciones.[^icmje]
 
 > [!definicion] Descripción reproducible del método
 > Descripción que proporciona información suficiente para reconstruir las operaciones que produjeron un resultado: materiales, condiciones, decisiones, datos necesarios y tratamiento aplicado. Esta suficiencia del texto permite examinar cómo y por qué se ejecutó el procedimiento.[^icmje]
 
-«Se midió varias veces» deja sin determinar la magnitud, el número de repeticiones y el procedimiento. En un péndulo debe precisarse, por ejemplo, si se cronometró una oscilación o un conjunto, qué fijó el inicio y el final del intervalo y cómo se trataron las repeticiones. Cada decisión capaz de alterar el resultado necesita quedar identificada.[^icmje]
+«Se midió varias veces» no dice qué se midió, cuántas repeticiones hubo ni cómo se tomó cada medida. En el caso de un péndulo, aclara si cronometraste una oscilación o varias, qué momento marcó el inicio y el final y cómo trataste las repeticiones. Si una decisión puede cambiar el resultado, deja constancia de ella.[^icmje]
 
-La distinción entre observación, hipótesis y modelo permite separar lo registrado de lo supuesto en [[Física/Preuniversitario/2 Bachillerato/01 Trabajo científico y herramientas matemáticas/Investigación y modelización en Física|la investigación y modelización en Física]].
+Al redactar el método, distingue lo que observaste de lo que supusiste o modelizaste; esa diferencia se desarrolla en [[Física/Preuniversitario/2 Bachillerato/01 Trabajo científico y herramientas matemáticas/Investigación y modelización en Física|la investigación y modelización en Física]].
 
 ```anki
 deck: Física::Produção de Relatórios::Informes
@@ -136,16 +136,16 @@ tags:
 
 ## Estructura de un informe breve
 
-Las secciones de un informe experimental distribuyen seis funciones: plantear, describir el procedimiento, presentar evidencia, interpretarla, responder y sintetizar. Algunos enunciados reúnen resultados y discusión; incluso entonces debe poder distinguirse qué se observó y qué interpretación se propone.[^sheffield]
+Un informe experimental suele hacer seis cosas: plantea la pregunta, cuenta cómo se trabajó, presenta los datos, los interpreta, responde al objetivo y resume el resultado. A veces el enunciado junta resultados y discusión en una misma sección. En ese caso, separa con claridad lo que observaste de la explicación que propones.[^sheffield]
 
 ### Introducción
 
-Para entender un objetivo concreto, el lector necesita reconocer el problema del que procede. La introducción reduce progresivamente ese alcance: contexto pertinente, aspecto estudiado y pregunta que se pretende responder.[^sheffield]
+Antes de leer el objetivo, el lector necesita saber de qué problema nace. La introducción lo lleva desde el contexto necesario hasta el aspecto concreto que estudias y la pregunta que quieres responder.[^sheffield]
 
 > [!definicion] Introducción
 > Sección que sitúa el problema y formula el objetivo del trabajo. Incluye la motivación y los antecedentes necesarios para comprender la pregunta, y puede declarar una hipótesis cuando corresponda.[^estructura][^sheffield]
 
-En un estudio de períodos, la explicación del fenómeno debe preparar la comparación que se realizará. Si un contenido teórico no interviene en el objetivo, el procedimiento o la interpretación, su inclusión puede dificultar que se reconozca esa comparación. En el esquema extenso docente, la introducción también identifica las contribuciones y orienta sobre la estructura del documento.[^estructura][^sheffield]
+Si vas a comparar períodos, incluye en la introducción la teoría que ayude a entender esa comparación. Un rodeo teórico que no vuelva a aparecer en el objetivo, el método o la interpretación distrae de la pregunta. En el esquema extenso de la asignatura, la introducción también presenta las contribuciones y adelanta cómo se organiza el documento.[^estructura][^sheffield]
 
 ```anki
 deck: Física::Produção de Relatórios::Informes
@@ -178,7 +178,7 @@ tags:
 > [!definicion] Método
 > Sección que describe los materiales, condiciones, operaciones y tratamiento de datos utilizados para obtener los resultados.[^icmje]
 
-Puede organizarse por montaje, adquisición y análisis. Una fórmula pertenece al método cuando explica cómo se transforma una medida en otra magnitud; los valores calculados mediante esa fórmula se presentan en resultados. Esta separación permite reconstruir el cálculo y después examinar lo que produjo.[^icmje][^sheffield]
+Puedes ordenar el método por montaje, toma de datos y análisis. Explica aquí la fórmula que usaste para convertir una medida en otra magnitud; deja para resultados los valores obtenidos. Así, quien lee puede seguir el cálculo y luego examinar sus resultados.[^icmje][^sheffield]
 
 ```anki
 deck: Física::Produção de Relatórios::Informes
@@ -215,12 +215,12 @@ tags:
 
 ### Discusión
 
-Los datos adquieren significado al relacionarlos con la pregunta, las explicaciones posibles y las limitaciones del procedimiento.[^sheffield]
+En la discusión, vuelve a la pregunta inicial: ¿qué dicen los datos?, ¿qué explicaciones encajan con ellos? y ¿qué límites del procedimiento afectan la respuesta?[^sheffield]
 
 > [!definicion] Discusión
 > Sección que interpreta los resultados: examina qué significan, con qué explicaciones son compatibles y qué limitaciones afectan a la respuesta.[^sheffield]
 
-Una diferencia numérica se presenta en resultados. Atribuirla al rozamiento exige justificar la explicación en la discusión. Si ese factor no se ha medido ni controlado, puede proponerse como causa plausible, conservando la distinción entre lo observado y lo que aún debe comprobarse.[^sheffield]
+En resultados puedes informar de la diferencia numérica; para atribuirla al rozamiento hace falta razonar en la discusión. Si no mediste ni controlaste ese factor, preséntalo como una posible explicación y deja claro que los datos no bastan para confirmarla.[^sheffield]
 
 ```anki
 deck: Física::Produção de Relatórios::Informes
@@ -361,7 +361,7 @@ tags:
 > [!definicion] Cuerpo del trabajo
 > Desarrollo principal en el que se plantea el problema, se explica cómo se abordó, se presentan los resultados y se construye la respuesta.[^estructura][^sheffield]
 
-En el esquema docente, el cuerpo recorre introducción, trabajo relacionado, análisis, diseño, implementación, resultados y conclusión. En una práctica experimental breve, las funciones del procedimiento y su evaluación se distribuyen habitualmente entre método, resultados y discusión.[^estructura][^sheffield]
+El esquema extenso de la asignatura dedica espacio a la introducción, el trabajo relacionado, el análisis, el diseño, la implementación, los resultados y la conclusión. En una práctica breve, en cambio, el método cuenta el procedimiento y resultados y discusión separan lo observado de su interpretación.[^estructura][^sheffield]
 
 ```anki
 deck: Física::Produção de Relatórios::Informes
@@ -401,7 +401,7 @@ tags:
 > [!definicion] Dedicatoria
 > Texto personal que dedica el trabajo a una persona o colectivo. El esquema docente la contempla entre los preliminares.[^estructura][^dedicatoria]
 
-Su presencia responde al carácter del documento y a los requisitos de entrega; no desarrolla el argumento científico.[^estructura]
+Inclúyela solo si encaja con el documento y con lo que pide la entrega; la dedicatoria no forma parte del argumento científico.[^estructura]
 
 ```anki
 deck: Física::Produção de Relatórios::Informes
@@ -438,7 +438,7 @@ tags:
 
 ### Resúmenes en la pauta docente
 
-La profesora indica estas extensiones para el esquema de informe extenso:[^estructura]
+Para el informe extenso, la profesora propone estas extensiones:[^estructura]
 
 | Lengua del trabajo | Resúmenes indicados |
 |---|---|
@@ -486,7 +486,7 @@ tags:
 > [!definicion] Índice de figuras
 > Relación de las figuras del documento con su identificación y localización.[^estructura]
 
-Facilita buscar un montaje, una gráfica u otra representación sin recorrer todo el texto.[^estructura]
+Así, quien consulta el informe puede ir directamente al montaje, a una gráfica o a otra representación, sin hojear el documento entero.[^estructura]
 
 ```anki
 deck: Física::Produção de Relatórios::Informes
@@ -523,14 +523,14 @@ tags:
 
 ## Desarrollo de un proyecto extenso
 
-Las etapas del esquema docente separan decisiones que, en un proyecto, pueden necesitar capítulos propios: situar los antecedentes, precisar el problema, justificar una solución y explicar su realización.[^estructura]
+En un proyecto, esas etapas pueden ocupar capítulos distintos: primero sitúas los antecedentes, luego delimitas el problema, justificas la solución y explicas cómo la llevaste a cabo.[^estructura]
 
 ### Trabajo relacionado
 
 > [!definicion] Trabajo relacionado
 > Sección que sitúa el problema respecto a trabajos previos pertinentes y permite reconocer qué aportación se pretende realizar.[^estructura][^cambridge]
 
-Las fuentes se seleccionan por su relación con la pregunta. Comparar enfoques y limitaciones permite justificar por qué el proyecto adopta una determinada orientación.[^cambridge]
+Elige las fuentes pensando en la pregunta del proyecto. Comparar sus enfoques y límites ayuda a explicar por qué seguiste una orientación concreta.[^cambridge]
 
 ```anki
 deck: Física::Produção de Relatórios::Informes
@@ -567,12 +567,12 @@ tags:
 
 ### Diseño
 
-Una vez precisado el problema, deben justificarse las decisiones que organizan la solución.[^estructura]
+Con el problema ya delimitado, explica por qué elegiste esa forma de resolverlo.[^estructura]
 
 > [!definicion] Diseño
 > Etapa que propone y justifica cómo se organizará la solución para responder al problema analizado.[^estructura][^cambridge]
 
-Para la herramienta de medidas, puede explicar la separación entre entrada de datos, cálculo y presentación. La elección se justifica por las necesidades identificadas en el análisis.
+En una herramienta para procesar medidas, por ejemplo, puedes separar la entrada de datos, el cálculo y la presentación de resultados. Relaciona esa decisión con las necesidades que encontraste al analizar el problema.
 
 ```anki
 deck: Física::Produção de Relatórios::Informes
@@ -612,7 +612,7 @@ tags:
 > [!definicion] Anexo
 > Parte complementaria que conserva material útil para comprobar o ampliar el trabajo sin interrumpir el argumento principal.[^sheffield]
 
-Un registro de datos extenso o un desarrollo técnico pueden ir en un anexo. El cuerpo debe indicar dónde se encuentran y para qué se consultan; la información necesaria para comprender la respuesta principal debe seguir siendo accesible en el argumento.[^sheffield]
+Si el registro de datos es muy largo o el desarrollo técnico desviaría del hilo principal, puedes llevarlo a un anexo. En el cuerpo, señala dónde está y cuándo conviene consultarlo. Mantén en el argumento todo lo que el lector necesita para entender la respuesta.[^sheffield]
 
 ```anki
 deck: Física::Produção de Relatórios::Informes
@@ -652,7 +652,7 @@ tags:
 > [!definicion] Cita bibliográfica
 > Indicación situada en el cuerpo del trabajo que identifica la fuente de una afirmación, dato o argumento y remite a su referencia bibliográfica.[^icmje][^sheffield]
 
-La cita se coloca junto a la información utilizada. De este modo puede distinguirse qué afirmaciones se apoyan en cada obra, mientras la bibliografía reúne los datos necesarios para recuperarla.[^icmje][^sheffield]
+Pon la cita junto al dato, la idea o el método que tomaste de otra obra. La bibliografía reúne los datos necesarios para localizarla; la cita muestra qué parte de tu informe depende de ella.[^icmje][^sheffield]
 
 ```anki
 deck: Física::Produção de Relatórios::Informes
@@ -696,7 +696,7 @@ tags:
 > [!definicion] Figura científica
 > Representación visual de una relación, un montaje o una pauta relevante para el trabajo, identificada y explicada mediante una leyenda.[^icmje]
 
-Una figura puede ser una fotografía de un montaje, un esquema o una gráfica. La elección debe ayudar a examinar una cuestión del informe y conservar la legibilidad de la información.[^icmje][^sheffield]
+Una figura puede mostrar una fotografía del montaje, un esquema o una gráfica. Elige la que ayude a responder una pregunta del informe y asegúrate de que sus detalles se lean bien.[^icmje][^sheffield]
 
 ```anki
 deck: Física::Produção de Relatórios::Informes
@@ -739,11 +739,11 @@ tags:
 | Examinar tendencias, relaciones o dispersión | Gráfica. |
 | Reconocer el hallazgo relevante para el objetivo | Texto que explica la lectura de los datos. |
 
-La prosa, las tablas y las figuras deben aportar funciones complementarias. Repetir una tabla completa en palabras dificulta reconocer qué resultado interesa destacar.[^sheffield][^icmje]
+Usa el texto, las tablas y las figuras para tareas distintas. La tabla conserva los valores; en la prosa, destaca el resultado que importa para el objetivo, en vez de volver a copiarla entera.[^sheffield][^icmje]
 
 #### Ejemplo — Cinco medidas de período
 
-**Tarea.** Se registran cinco períodos ficticios, en segundos: $1{,}41$, $1{,}44$, $1{,}42$, $1{,}40$ y $1{,}43$, todos a una misma longitud del péndulo. Decide cómo conservar cada valor y cómo comunicar qué comparación permiten.
+**Tarea.** Supón que obtienes cinco períodos ficticios, en segundos: $1{,}41$, $1{,}44$, $1{,}42$, $1{,}40$ y $1{,}43$. Todos corresponden a la misma longitud del péndulo. Decide cómo guardar cada medida y qué comparación comunicarías.
 
 Para recuperar las medidas individuales se elige una tabla:
 
@@ -755,9 +755,9 @@ Para recuperar las medidas individuales se elige una tabla:
 | 4 | 1,40 |
 | 5 | 1,43 |
 
-La prosa puede destacar: «Las cinco medidas a una misma longitud se situaron entre $1{,}40$ y $1{,}44\ \mathrm{s}$». Una gráfica de los valores por repetición permitiría inspeccionar su dispersión. Si se calcula una media, el método debe explicar ese tratamiento y resultados debe identificar el valor que resume las repeticiones.[^sheffield]
+En el texto podrías señalar: «Las cinco medidas, tomadas con la misma longitud, quedaron entre $1{,}40$ y $1{,}44\ \mathrm{s}$». Una gráfica con una marca por repetición mostraría cómo se dispersan. Si calculas la media, explica en el método cómo la obtuviste y comunica el valor en resultados.[^sheffield]
 
-La comprobación exige mantener la condición común de las medidas: ni la tabla ni la gráfica añaden observaciones a otras longitudes. Los datos permiten examinar la variación entre repeticiones, pero no establecer cómo cambia el período al variar la longitud.
+Fíjate en que las cinco medidas se tomaron con la misma longitud: la tabla y la gráfica no añaden datos de otras condiciones. Con ellas puedes estudiar cuánto difieren las repeticiones; todavía no puedes decir cómo cambia el período al cambiar la longitud.
 
 ```anki
 deck: Física::Produção de Relatórios::Informes
@@ -807,7 +807,7 @@ tags:
 > [!definicion] Párrafo científico
 > Unidad de exposición que desarrolla una idea reconocible y la conecta con la evidencia o el razonamiento que la sostiene.[^parrafo]
 
-Un cambio de pregunta, procedimiento o interpretación puede requerir un párrafo nuevo. Así, la descripción del cronometraje y la explicación de una discrepancia se desarrollan por separado: responden a funciones distintas del informe.[^parrafo][^sheffield]
+Si pasas a otra pregunta, a otro paso del método o a una interpretación, quizá convenga abrir un párrafo nuevo. Por ejemplo, cuenta cómo cronometraste en uno y explica una discrepancia en otro: el lector verá enseguida qué función cumple cada parte.[^parrafo][^sheffield]
 
 ```anki
 deck: Física::Produção de Relatórios::Informes
@@ -847,7 +847,7 @@ tags:
 > [!definicion] Encabezado
 > Título que identifica una parte del argumento y permite localizarla; su nivel indica la relación de esa parte con las secciones que la contienen.[^estructura][^monash]
 
-Los capítulos agrupan fases amplias; las secciones y subsecciones separan preguntas o procedimientos subordinados. Los nombres deben anticipar el contenido: «Montaje» permite localizar una descripción experimental con mayor precisión que «Otros aspectos».[^monash]
+Reserva los capítulos para las partes amplias del trabajo y usa secciones y subsecciones para separar preguntas o procedimientos concretos. Un encabezado como «Montaje» le dice al lector qué encontrará; «Otros aspectos» no le da esa pista.[^monash]
 
 ```anki
 deck: Física::Produção de Relatórios::Informes
@@ -883,7 +883,7 @@ tags:
 
 ### Revisión funcional
 
-La revisión comprueba tanto el razonamiento como el documento compuesto. Una conclusión puede estar bien redactada y, aun así, carecer de evidencia; una figura correcta puede quedar mal identificada por su leyenda o por la referencia del texto.[^cap1][^sheffield]
+Al revisar, sigue el argumento y luego mira el informe tal como quedó compuesto. Pregúntate si cada conclusión se apoya en datos; después comprueba que las leyendas y las referencias señalen las figuras correctas.[^cap1][^sheffield]
 
 > [!procedimiento] Reconstruir y revisar el argumento
 > 1. Comprobar que cada objetivo recibe una respuesta identificable.
@@ -892,7 +892,7 @@ La revisión comprueba tanto el razonamiento como el documento compuesto. Una co
 > 4. Revisar que tablas, figuras y texto cumplen funciones complementarias.
 > 5. Comprobar en el documento final la correspondencia de títulos, referencias y leyendas, además de unidades y corrección de la lengua.[^cap1][^estructura][^sheffield]
 
-==Una afirmación que excede la evidencia se corrige limitando su alcance==. Los detalles experimentales ausentes se recuperan del registro del trabajo; una redacción más fluida no permite reconstruir datos que nunca se consignaron.[^icmje][^sheffield]
+==Si los datos sostienen una afirmación más modesta, reduce el alcance de la conclusión.== Cuando falte un detalle del procedimiento, búscalo en el cuaderno o registro de laboratorio: pulir la frase no permite recuperar una medida que nunca se anotó.[^icmje][^sheffield]
 
 ```anki
 deck: Física::Produção de Relatórios::Informes
@@ -1000,20 +1000,20 @@ La organización hace localizable la relación entre procedimiento y evidencia. 
 
 ## 🧑‍🏫 Prompt para tutor conversacional
 
-Actúa como profesor de Produção de Relatórios de primer curso universitario. Examina una pregunta cada vez y espera la respuesta antes de mostrar la solución.
+Actúa como profesor de Produção de Relatórios para un estudiante de primer curso universitario. Haz una pregunta cada vez y espera su respuesta antes de dar pistas o explicar la solución.
 
 ### Conocimientos que debes evaluar
 
-- **Argumento científico.** Un informe comunica problema, procedimiento, resultados y conclusiones sostenidas por la evidencia. Su estructura depende del trabajo y de la entrega. La descripción del método debe permitir reconstruir materiales, condiciones, operaciones, decisiones y tratamiento. La resolución de un cronómetro no representa por sí sola la incertidumbre total de una medida manual.
-- **Informe experimental breve.** Introducción sitúa el problema y formula el objetivo; método explica las operaciones; resultados presenta lo observado o calculado; discusión interpreta y examina limitaciones; conclusiones responden con el alcance de la evidencia. El resumen comunica objetivo, procedimiento, hallazgos y conclusión de forma autónoma. Las versiones lingüísticas conservan las mismas afirmaciones.
-- **Informe extenso.** Los preliminares identifican y facilitan la consulta: portada, posibles dedicatoria y agradecimientos, resúmenes e índices de contenido, figuras y tablas. El cuerpo desarrolla el argumento. Trabajo relacionado sitúa antecedentes; análisis precisa el problema; diseño justifica la organización de la solución; implementación explica su realización; resultados y conclusión presentan evidencia y respuesta. Anexos conservan detalle complementario; bibliografía identifica fuentes y las citas señalan dónde se usan. La pauta docente indica resúmenes portugués e inglés de unas 300 palabras si el trabajo está en portugués y un resumen portugués adicional de al menos 1200 palabras si está en lengua extranjera; el enunciado determina su aplicación a una entrega.
-- **Representación y escritura.** Tabla permite recuperar valores; gráfica, examinar pautas; figura puede representar datos o un montaje. Texto explica el hallazgo relevante. La leyenda identifica lo representado y aclara símbolos, unidades y posibles barras de incertidumbre. Un párrafo desarrolla una idea; listas distinguen elementos paralelos o pasos; encabezados expresan contenido y jerarquía. Referentes, símbolos y unidades deben quedar claros.
+- **Argumento científico.** Ayuda al estudiante a conectar el problema, el procedimiento, los resultados y las conclusiones que la evidencia permite sostener. La estructura cambia según el tipo de trabajo y lo que pide la entrega. Para describir el método, debe incluir materiales, condiciones, operaciones, decisiones y tratamiento suficientes para que otra persona reconstruya el proceso. Recuerda que la resolución de un cronómetro no representa por sí sola toda la incertidumbre de una medida manual.
+- **Informe experimental breve.** Comprueba que la introducción sitúe el problema y formule el objetivo; que el método cuente las operaciones; que resultados presente lo observado o calculado; que discusión interprete y examine límites; y que conclusiones respondan hasta donde llega la evidencia. El resumen debe presentar por sí solo el objetivo, el procedimiento, los hallazgos y la conclusión. Si hay versiones en distintos idiomas, deben comunicar las mismas afirmaciones.
+- **Informe extenso.** Los preliminares ayudan a identificar y consultar el documento: portada, posible dedicatoria y agradecimientos, resúmenes e índices de contenido, figuras y tablas. El cuerpo desarrolla el argumento. El capítulo de trabajo relacionado sitúa los antecedentes; el análisis concreta el problema; el diseño justifica la solución; la implementación explica cómo se realizó; y los resultados y la conclusión presentan la evidencia y la respuesta. Los anexos guardan detalles complementarios; las citas muestran dónde se usan las fuentes y la bibliografía permite recuperarlas. La pauta docente propone resúmenes de unas 300 palabras en portugués e inglés si el trabajo está en portugués y añade un resumen portugués de al menos 1200 palabras si se redacta en otra lengua. Antes de aplicar esas extensiones, comprueba qué pide la entrega concreta.
+- **Representación y escritura.** Usa tablas cuando el lector necesite consultar valores y gráficas para examinar tendencias o dispersión. Una figura puede mostrar datos o el montaje. El texto debe destacar el hallazgo útil para el objetivo; la leyenda explica qué se ve, con sus símbolos, unidades y posibles barras de incertidumbre. Cada párrafo desarrolla una idea. Las listas separan elementos paralelos o pasos, y los encabezados anticipan el contenido y su lugar en la jerarquía. Nombra las magnitudes y los símbolos con claridad.
 
 ### Práctica y protocolo
 
-Usa cinco períodos ficticios de 1,41; 1,44; 1,42; 1,40 y 1,43 segundos a una misma longitud. Pide elegir una representación y explicar por qué esos datos no permiten estudiar una dependencia con la longitud. Haz clasificar frases de método, resultado e interpretación; reparar un método incompleto sin inventar datos; redactar una leyenda; y adaptar un esquema de proyecto a una práctica breve.
+Para practicar, presenta cinco períodos ficticios —1,41; 1,44; 1,42; 1,40 y 1,43 segundos— medidos con una misma longitud. Pregunta qué representación elegiría y por qué esos valores no permiten estudiar cómo cambia el período con la longitud. Después, pídele clasificar frases como método, resultado o interpretación, reparar un método incompleto sin inventar datos, escribir una leyenda y adaptar la estructura de un proyecto a una práctica breve.
 
-Pide revisar un informe desde sus objetivos hasta sus conclusiones: identificar evidencia, reconstruir el procedimiento y comprobar correspondencias entre texto, figuras y referencias. Distingue errores de estructura, evidencia, lenguaje y unidades. Corrige con precisión, ofrece pistas tras el intento y adapta la dificultad mediante recuperación activa, repetición espaciada, profundización y práctica guiada. Continúa con fuente, compilación y estructura de LaTeX.
+Pídele que revise un informe de principio a fin: que relacione cada objetivo con la evidencia, reconstruya el procedimiento y compruebe que el texto cite las figuras y referencias correctas. Separa los problemas de estructura, evidencia, lenguaje y unidades. Corrige con precisión, espera a que lo intente y luego ofrece pistas. Alterna recuperación activa, repetición espaciada, preguntas de profundización y práctica guiada. Continúa con el fuente, la compilación y la estructura de LaTeX.
 
 ```dataviewjs
 await dv.view("Planes/Estudio/Scripts/study-session", { location: "end" })

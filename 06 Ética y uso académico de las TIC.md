@@ -29,7 +29,7 @@ await dv.view("Planes/Estudio/Scripts/study-session", { location: "start" })
 
 # Ética y uso académico de las TIC
 
-Las tecnologías de la información permiten localizar, transformar y difundir documentos con rapidez. Cada operación afecta a una responsabilidad concreta: reconocer autoría, representar fielmente los resultados, respetar condiciones de uso y proteger información personal. La unidad de ética de *Produção de Relatórios* sitúa esas decisiones en la universidad y en la sociedad de la información.[^programa]
+Con las tecnologías de la información puedes encontrar, modificar y compartir documentos en poco tiempo. Cada paso trae una responsabilidad: citar a quien creó el material, mostrar los resultados con fidelidad, respetar las condiciones de uso y proteger los datos personales. La unidad de ética de *Produção de Relatórios* trata estas decisiones en el contexto universitario y de la sociedad de la información.[^programa]
 
 ## Información, acceso y responsabilidad
 
@@ -38,7 +38,7 @@ Las tecnologías de la información permiten localizar, transformar y difundir d
 > [!definicion] Alfabetización informacional
 > Capacidad para reconocer qué información se necesita, localizarla, evaluarla y utilizarla de manera crítica y responsable.[^unesco]
 
-La abundancia de resultados no garantiza una respuesta fiable. Conviene identificar quién publica, qué documento se está leyendo y para qué pregunta aporta evidencia. El acceso a conocimiento, las diferencias de competencias digitales y la posibilidad de consultar materiales forman parte de la dimensión social de las TIC.[^unesco]
+Encontrar muchos resultados no significa que ya tengas una respuesta fiable. Averigua quién publica, qué documento estás leyendo y cómo ayuda a responder tu pregunta. También forman parte de la dimensión social de las TIC el acceso al conocimiento, las diferencias en competencias digitales y la posibilidad de consultar materiales.[^unesco]
 
 ```anki
 deck: Física::Produção de Relatórios::Ética
@@ -58,7 +58,7 @@ tags:
 > [!definicion] Acceso técnico
 > Posibilidad efectiva de abrir, descargar o consultar un recurso. Esa disponibilidad no establece por sí sola la autorización para reproducirlo, modificarlo o difundirlo.[^codigo][^cc]
 
-Una fotografía visible en un buscador puede conservar derechos de autor y de imagen. Un archivo compartido con un grupo puede contener información que no deba publicarse. Por eso se distinguen tres preguntas: ¿puedo consultarlo?, ¿qué uso puedo hacer de él? y ¿cómo debo reconocer su procedencia?
+Que una fotografía aparezca en un buscador no elimina los derechos de autor ni los de imagen. Y un archivo que circula dentro de un grupo puede contener datos que no deben publicarse. Antes de usar cualquier recurso, pregúntate: ¿puedo abrirlo?, ¿qué puedo hacer con él? y ¿cómo reconozco de dónde procede?
 
 ```anki
 deck: Física::Produção de Relatórios::Ética
@@ -102,7 +102,7 @@ tags:
 > [!definicion] Plagio académico
 > Presentación de trabajo ajeno como propio, incluida la incorporación de fragmentos o la paráfrasis sin identificación de su procedencia.[^codigo][^oxford]
 
-La autoría se reconoce tanto en texto como en imágenes, datos y programas. Una cita próxima delimita qué idea procede de otra obra; la bibliografía permite recuperar esa obra. El hecho de que el material sea accesible o esté en dominio público no elimina el deber académico de atribuir su origen.[^codigo]
+También hay que atribuir imágenes, datos y programas, además del texto. Coloca la cita junto a la idea que tomaste y añade en la bibliografía los datos necesarios para localizar la obra. Que el material esté disponible o sea de dominio público no elimina la obligación académica de reconocer su origen.[^codigo]
 
 ```anki
 deck: Física::Produção de Relatórios::Ética
@@ -139,7 +139,7 @@ tags:
 
 #### Ejemplo — Una paráfrasis que altera el alcance
 
-Una fuente estudia tres muestras bajo una condición concreta. La reformulación «el procedimiento funciona en todos los casos» introduce una universalidad que el resultado no establece. La reparación debe conservar muestra, condición y conclusión efectiva; añadir la referencia sin corregir el alcance seguiría atribuyendo a la obra algo que no sostiene.
+Imagina que una fuente estudia tres muestras bajo una condición concreta. Si escribes «el procedimiento funciona en todos los casos», conviertes un resultado limitado en una afirmación universal. Corrige la frase para conservar el número de muestras, la condición y lo que realmente concluye el estudio. Añadir una cita sin ajustar el alcance seguiría atribuyendo a la fuente algo que no demuestra.
 
 ```anki
 deck: Física::Produção de Relatórios::Ética
@@ -179,7 +179,7 @@ tags:
 > [!definicion] Autorreutilización engañosa
 > Presentación repetida de un trabajo anterior, o de partes importantes de él, como si constituyera una aportación nueva, sin material significativamente nuevo ni reconocimiento de la reutilización.[^codigo]
 
-Reutilizar un método o un resultado anterior exige hacer reconocible qué se retoma y qué aporta el nuevo trabajo. En una evaluación, las condiciones de entrega determinan además si se autoriza ese uso. La pregunta práctica consiste en poder distinguir antecedentes, texto recuperado y contribución actual.
+Si retomas un método o un resultado anterior, deja claro qué parte reutilizas y qué aporta el trabajo actual. En una evaluación, comprueba también si las condiciones de entrega permiten hacerlo. El lector debe poder distinguir los antecedentes, el material recuperado y tu contribución.
 
 ```anki
 deck: Física::Produção de Relatórios::Ética
@@ -221,7 +221,7 @@ tags:
 > [!definicion] Integridad de resultados
 > Conservación de una relación comprobable entre los registros, el tratamiento aplicado y las afirmaciones comunicadas.[^codigo]
 
-Inventar valores o cambiar un registro para favorecer una conclusión destruye esa relación. También la perjudican la omisión voluntaria de resultados indeseados, una interpretación falsa y la distorsión del método. El código institucional identifica estas conductas como contrarias a la integridad.[^codigo]
+Inventar valores o retocar un registro para favorecer una conclusión rompe la confianza en el trabajo. Lo mismo ocurre si escondes resultados que no te convienen, presentas una interpretación falsa o alteras el método. El código institucional identifica estas conductas como contrarias a la integridad.[^codigo]
 
 ```anki
 deck: Física::Produção de Relatórios::Ética
@@ -295,7 +295,7 @@ tags:
 > [!definicion] Exclusión justificada
 > Retirada de un dato del análisis mediante un criterio que puede declararse, examinarse y aplicarse coherentemente. El registro original conserva la posibilidad de comprobar la decisión.[^codigo]
 
-Que un punto contradiga una expectativa no basta para descartarlo. Si existe un fallo documentado de adquisición, se explica qué ocurrió, qué medida afecta y cómo cambia el análisis. La reparación de un registro y la selección de datos deben quedar distinguibles.
+No descartes un dato solo porque contradiga lo que esperabas. Si el registro muestra un fallo durante la adquisición, cuenta qué ocurrió, qué medida afectó y cómo cambia el análisis. Deja claro qué datos corregiste y cuáles excluiste.
 
 ```anki
 deck: Física::Produção de Relatórios::Ética
@@ -369,7 +369,7 @@ tags:
 > [!definicion] Licencia de uso
 > Condiciones con las que una persona titular de derechos autoriza determinados usos de una obra. Una licencia abierta concede permisos concretos y puede exigir atribución y otras condiciones.[^cc]
 
-Las condiciones de Creative Commons pueden combinarse. Se consulta la licencia concreta antes de modificar o distribuir. Una cita y un permiso cumplen funciones distintas: la primera reconoce procedencia; el segundo autoriza un uso.[^cc]
+Las licencias Creative Commons combinan distintas condiciones. Antes de modificar o compartir una obra, lee la licencia concreta. Citar y pedir permiso no son lo mismo: la cita reconoce de dónde viene el material y el permiso autoriza ciertos usos.[^cc]
 
 ```anki
 deck: Física::Produção de Relatórios::Ética
@@ -443,7 +443,7 @@ tags:
 > [!definicion] Condición ND
 > Restricción que no autoriza compartir una adaptación de la obra conforme a esa licencia. No prohíbe por sí sola crearla sin compartirla.[^nd]
 
-Las excepciones y limitaciones legales pueden operar al margen de los permisos de una licencia. Además, los derechos de imagen y privacidad necesitan su propia comprobación cuando intervienen personas identificables.[^nd]
+La ley puede establecer excepciones o límites que no dependen de la licencia. Si aparecen personas identificables, revisa además los derechos de imagen y la privacidad: la licencia de la obra no resuelve esas cuestiones por sí sola.[^nd]
 
 ```anki
 deck: Física::Produção de Relatórios::Ética
@@ -473,7 +473,7 @@ tags:
 
 #### Ejemplo — Reutilizar una imagen en una presentación
 
-La tarea es incorporar una fotografía encontrada en una búsqueda. Se abre la página original, se identifica al autor y se comprueban la licencia y el uso permitido. La diapositiva incluye una atribución legible y, cuando proceda, indica la adaptación. Si hay personas identificables, se examina además la protección de imagen y privacidad; una licencia de la fotografía no resuelve automáticamente todas esas cuestiones.[^cc][^etica]
+Supón que quieres usar en una diapositiva una fotografía que encontraste mediante una búsqueda. Abre la página original, averigua quién la creó y lee la licencia para saber qué usos permite. Incluye una atribución que pueda leerse y señala si adaptaste la imagen. Si aparecen personas identificables, revisa también la privacidad y los derechos de imagen: la licencia de la fotografía no cubre automáticamente esos aspectos.[^cc][^etica]
 
 ```anki
 deck: Física::Produção de Relatórios::Ética
@@ -584,7 +584,7 @@ tags:
 > [!definicion] Uso autorizado de recursos digitales
 > Acceso y utilización de redes, equipos y archivos dentro de los permisos y las normas aplicables a su usuario.[^codigo]
 
-El código de ULisboa rechaza acceso o interferencia ilegítimos y vulneraciones de privacidad e imagen. La aplicación académica es concreta: usar credenciales propias, respetar permisos y no alterar archivos ajenos. La posibilidad técnica de copiar o abrir un recurso no amplía la autorización recibida.
+El código de ULisboa prohíbe el acceso o la interferencia ilegítimos y las vulneraciones de privacidad e imagen. En el trabajo académico, eso significa usar tus propias credenciales, respetar los permisos y no alterar archivos ajenos. Poder abrir o copiar un recurso no te da más autorización de la que recibiste.
 
 ```anki
 deck: Física::Produção de Relatórios::Ética
@@ -625,7 +625,7 @@ tags:
 
 ### Reglas de la unidad curricular
 
-Las orientaciones permiten que cada unidad curricular defina sus condiciones, desde admitir determinados usos hasta prohibirlos. Ese marco general no establece por sí solo qué uso se autoriza en una entrega concreta de Produção de Relatórios. Las condiciones de la asignatura y de la evaluación deben identificarse antes de utilizar la herramienta.[^ia]
+Las orientaciones dejan que cada asignatura fije sus propias condiciones, desde permitir ciertos usos hasta prohibirlos. Por sí solo, el marco general no dice qué se autoriza en una entrega concreta de *Produção de Relatórios*. Antes de usar la herramienta, averigua qué condiciones rigen para esa asignatura y esa evaluación.[^ia]
 
 ```anki
 deck: Física::Produção de Relatórios::Ética
@@ -719,25 +719,25 @@ La [[Física/Grado/1º/Produção de Relatórios/01 Informes y escritura cientí
 
 ## 🧑‍🏫 Prompt para tutor conversacional
 
-Tutoriza Produção de Relatórios a nivel universitario introductorio: una pregunta cada vez y espera antes de corregir.
+Actúa como tutor de Produção de Relatórios para un estudiante de primer curso. Haz una pregunta cada vez y espera su respuesta antes de corregirla.
 
-Alfabetización informacional significa localizar, evaluar y usar información responsablemente. Acceso técnico no equivale a permiso de reutilizar.
+Empieza por preguntarle qué necesita averiguar y cómo podría encontrar, evaluar y usar información con responsabilidad. Distingue entre poder abrir un recurso y tener permiso para reutilizarlo.
 
-El código de ULisboa rechaza plagio, autorreutilización engañosa, autoría indebida, selección de resultados para ocultar evidencia, distorsión de métodos y vulneración de privacidad o redes.
+Repasa las conductas que el código de ULisboa considera contrarias a la integridad: plagio, autorreutilización engañosa, atribución indebida de autoría, selección de resultados para ocultar evidencia, distorsión del método y vulneración de la privacidad o las redes.
 
-Paráfrasis exige elaboración propia y atribución; cambiar sinónimos no transfiere autoría.
+Si una frase parece una paráfrasis, pídele que explique cómo la ha elaborado y de qué fuente procede. Cambiar unas palabras por sinónimos no convierte la idea en propia ni elimina la atribución.
 
-Una cita reconoce procedencia y una licencia autoriza usos: en CC, BY atribución, SA compartir adaptaciones con la misma licencia o una compatible, NC no comercial y ND no compartir adaptaciones conforme a esa licencia.
+Separa dos preguntas: la cita dice de dónde procede una obra y la licencia indica qué usos permite. En Creative Commons, BY exige atribución; SA requiere compartir las adaptaciones con la misma licencia o una compatible; NC limita el uso comercial y ND no permite compartir adaptaciones conforme a esa licencia.
 
-La integridad conecta registro→tratamiento→afirmación; las exclusiones necesitan criterio comprobable y conservación del original.
+Haz que siga un resultado desde el registro original hasta la operación aplicada y la afirmación escrita. Si se excluye un dato, debe haber un criterio comprobable y el registro original debe conservarse.
 
-Dato personal identifica directa o indirectamente; retirar nombres no anonimiza si hay reidentificación.
+Pregúntale si un dato permite identificar a alguien de forma directa o indirecta. Quitar los nombres no anonimiza una tabla si aún se puede volver a identificar a las personas.
 
-Las orientaciones de ULisboa de octubre de 2026 mantienen la responsabilidad humana sobre contenido generado con IA. Exige verificar afirmaciones y fuentes y comprobar las condiciones de la unidad curricular; el marco general no autoriza cualquier uso en una evaluación. En investigación, una herramienta no es coautora y el uso relevante se declara. Antes de introducir datos en una plataforma abierta se comprueba si son personales, confidenciales o no publicados y si está autorizado compartirlos.
+Al tratar el uso de IA, explica que las orientaciones de ULisboa de octubre de 2026 mantienen la responsabilidad humana sobre el contenido generado. Pide comprobar las afirmaciones y sus fuentes, y averiguar qué permite la unidad curricular: las orientaciones generales no autorizan cualquier uso en una evaluación. En investigación, una herramienta no es coautora y se declara el uso relevante. Antes de introducir información en una plataforma abierta, comprueba si contiene datos personales, confidenciales o no publicados y si está permitido compartirlos.
 
-Examina una gráfica con dos datos omitidos, una paráfrasis superficial y una fotografía pública de persona identificable. Pide distinguir atribución, permiso, fidelidad y privacidad.
+Propón tres casos: una gráfica a la que le faltan dos datos, una paráfrasis demasiado cercana a la fuente y una fotografía pública en la que aparece una persona identificable. En cada uno, pide distinguir qué exige la atribución, qué permiso hace falta, qué debe conservarse fielmente y qué aspecto de privacidad hay que revisar.
 
-Formula reparaciones concretas sin inventar condiciones institucionales particulares. Distingue errores conceptuales y decisiones de procedimiento; usa pistas, recuperación activa, repetición espaciada y transferencia a informes, presentaciones y código.
+Ayúdale a corregir cada caso con pasos concretos, sin inventar reglas institucionales. Distingue los errores conceptuales de las decisiones de procedimiento. Da pistas cuando las necesite y vuelve sobre los conceptos mediante recuperación activa, repetición espaciada y ejemplos de informes, presentaciones y código.
 
 ```dataviewjs
 await dv.view("Planes/Estudio/Scripts/study-session", { location: "end" })

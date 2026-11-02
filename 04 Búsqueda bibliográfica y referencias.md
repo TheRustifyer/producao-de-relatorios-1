@@ -101,7 +101,7 @@ tags:
 > [!definicion] OR
 > Operador que reúne resultados que cumplen al menos una de las alternativas consultadas.[^busqueda]
 
-`period OR oscillation` reúne dos términos que pueden ayudar a localizar una misma familia de problemas. Los paréntesis en `pendulum AND (period OR oscillation)` mantienen ese grupo de alternativas antes de combinarlo con el otro concepto.
+Prueba `period OR oscillation` si quieres localizar trabajos que usen cualquiera de esos términos. En `pendulum AND (period OR oscillation)`, los paréntesis agrupan primero las alternativas y luego las combinan con `pendulum`.
 
 ```anki
 deck: Física::Produção de Relatórios::Bibliografía
@@ -134,7 +134,7 @@ tags:
 > [!definicion] NOT
 > Operador que retira los resultados que cumplen la condición excluida.[^busqueda]
 
-En una búsqueda sobre laboratorio docente, `NOT teaching` puede eliminar precisamente los documentos pertinentes. Antes de mantener la exclusión se inspecciona qué resultados desaparecen y si el criterio coincide con el objetivo.
+Si buscas trabajos sobre prácticas docentes, `NOT teaching` podría quitar justo los textos que te interesan. Mira qué resultados desaparecen antes de mantener la exclusión y pregúntate si tiene sentido para tu objetivo.
 
 ```anki
 deck: Física::Produção de Relatórios::Bibliografía
@@ -176,7 +176,7 @@ tags:
 > [!definicion] Búsqueda de frase
 > Consulta que pide una secuencia de palabras juntas en el orden indicado, habitualmente mediante comillas.[^busqueda]
 
-`"simple pendulum"` intenta conservar la expresión como unidad, en vez de pedir sólo dos palabras dispersas. Se comprueba la ayuda de la plataforma para interpretar su tratamiento de signos y variantes.
+Al escribir `"simple pendulum"` pides la expresión completa, no dos palabras que aparezcan por separado. Consulta la ayuda de la plataforma para saber cómo trata las comillas, los signos y las variantes.
 
 ```anki
 deck: Física::Produção de Relatórios::Bibliografía
@@ -213,9 +213,9 @@ tags:
 
 #### Ejemplo — Una consulta que puede revisarse
 
-La tarea es buscar estudios sobre enseñanza experimental del péndulo. Se empieza por `pendulum AND teaching`, se inspeccionan títulos y resúmenes y se decide si hace falta precisar el método. Si aparece una terminología más adecuada, se registra y se prueba una consulta nueva. No se presupone que una formulación sea exhaustiva por haber producido muchos resultados.
+Busca estudios sobre enseñanza experimental del péndulo. Empieza con `pendulum AND teaching` y revisa títulos y resúmenes. Si necesitas acotar el método, añade un término; si encuentras una palabra más adecuada, anótala y prueba otra consulta. Muchos resultados no significan que la búsqueda haya cubierto todas las formas de nombrar el tema.
 
-Una búsqueda repetible conserva la base consultada, la fecha, la expresión y los filtros. Si se limita el período de publicación, debe poder explicarse qué necesita el trabajo: actualidad tecnológica, un antecedente histórico o ambos. Las decisiones se justifican por la pregunta, no por el número de documentos que resulte cómodo leer.[^busqueda]
+Para que otra persona pueda repetir la búsqueda, apunta la base, la fecha, la consulta y los filtros que usaste. Si restringes los años, explica por qué: quizá te interese la tecnología actual, un antecedente histórico o las dos cosas. Elige el alcance pensando en la pregunta, no en cuántos documentos te apetece leer.[^busqueda]
 
 ```anki
 deck: Física::Produção de Relatórios::Bibliografía
@@ -248,9 +248,9 @@ tags:
 > Descubrimiento y acceso institucional a recursos electrónicos, incluidas revistas, libros y bases de datos.
 ```
 
-La biblioteca de Ciências reúne catálogo de ULisboa, portales de descubrimiento, repositorios y bases bibliográficas. El catálogo ayuda a identificar obras; una base permite buscar registros; un repositorio puede ofrecer el texto depositado. Encontrar un registro no garantiza acceso al texto completo.[^biblioteca]
+La Biblioteca de Ciências ofrece el catálogo de ULisboa, portales de búsqueda, repositorios y bases bibliográficas. El catálogo sirve para identificar una obra; una base recupera registros; un repositorio puede dar acceso al documento depositado. Que encuentres la referencia no significa que tengas disponible el texto completo.[^biblioteca]
 
-Los contenidos restringidos a Ciências requieren la red interna. Desde una red exterior, la biblioteca indica utilizar VPN y disponer de una cuenta Ciências. El acceso depende de las condiciones institucionales del recurso; una sesión personal en un buscador no sustituye necesariamente esa conexión.[^biblioteca]
+Algunos recursos de Ciências solo se abren desde la red institucional. Si estás fuera, la biblioteca indica conectarte por VPN y usar una cuenta Ciências. El acceso también depende de las condiciones del recurso; iniciar sesión en un buscador no siempre sustituye esa conexión.[^biblioteca]
 
 ```anki
 deck: Física::Produção de Relatórios::Bibliografía
@@ -290,7 +290,7 @@ tags:
 > [!definicion] Base de datos bibliográfica
 > Conjunto organizado de registros de documentos que puede consultarse mediante términos, campos y filtros.[^biblioteca]
 
-Una base temática puede recuperar artículos de varias publicaciones. El registro orienta la selección; después se abre el documento para evaluar sus métodos y resultados.
+Una base temática puede encontrar artículos de distintas revistas. Usa el registro para decidir cuáles consultar y abre el documento antes de valorar sus métodos y resultados.
 
 ```anki
 deck: Física::Produção de Relatórios::Bibliografía
@@ -330,7 +330,7 @@ tags:
 > [!definicion] Fuente pertinente
 > Documento cuyo contenido aporta evidencia, un método o una explicación que responde a una necesidad concreta del argumento.[^programa][^icmje]
 
-Se abre el documento y se comprueba qué estudia, cómo obtiene sus resultados y con qué límites. Una revisión sirve para orientarse y comparar; una afirmación atribuida a un estudio original debe verificarse en ese estudio cuando sea posible. Seguir referencias de una fuente útil permite localizar antecedentes, pero cada obra incorporada necesita su propia comprobación.[^icmje]
+Cuando tengas el documento, mira qué estudia, cómo obtiene sus resultados y qué límites reconoce. Una revisión ayuda a orientarse y comparar; si atribuyes una afirmación a un estudio original, consulta ese estudio cuando sea posible. Las referencias de un artículo útil pueden llevarte a antecedentes, pero revisa cada obra antes de incluirla.[^icmje]
 
 ```anki
 deck: Física::Produção de Relatórios::Bibliografía
@@ -365,7 +365,7 @@ tags:
 > [!definicion] Metadatos bibliográficos
 > Datos que identifican y describen una obra: autoría, título, fecha, tipo de documento y publicación; según el caso, editorial, volumen, número, páginas o identificadores.[^docente][^crossref]
 
-Los campos se interpretan según el objeto: un artículo tiene revista y páginas; un libro, editorial y edición; un manual técnico puede identificar una versión. Una exportación automática ahorra escritura, pero sus valores deben compararse con la obra y el registro editorial. El formato coherente no corrige una autoría o un año erróneos.
+Los campos dependen del tipo de obra. Para un artículo anota la revista y las páginas; para un libro, la editorial y la edición; en un manual técnico, puede importar la versión. La exportación automática ahorra tiempo, pero compárala con la obra y con el registro editorial. Un formato ordenado no corrige un autor o un año equivocados.
 
 ```anki
 deck: Física::Produção de Relatórios::Bibliografía
@@ -402,7 +402,7 @@ tags:
 
 #### Ejemplo — Dos años para una misma búsqueda
 
-Un gestor devuelve un año y el PDF consultado muestra otro. No se elige el más reciente sin más: se abre el registro del DOI, se identifica si hay fechas de publicación electrónica y de volumen, y se compara la versión. La corrección de la entrada conserva esa correspondencia. Si la discrepancia no se resuelve, se registra como tal antes de utilizar el dato.
+Supón que el gestor bibliográfico muestra un año y el PDF otro. No elijas automáticamente el más reciente. Abre el registro del DOI, averigua si aparecen fechas distintas para la publicación en línea y para el volumen, y comprueba qué versión consultaste. Corrige la referencia para que describa esa versión; si la diferencia sigue sin aclararse, déjala identificada antes de usar el dato.
 
 #### Versión del documento
 
@@ -471,7 +471,7 @@ tags:
 > Sus datos de identificación y recuperación; se conecta con las citas que atribuyen usos concretos de esa obra.
 ```
 
-Una lista al final no señala qué obra sostiene cada resultado. La cita debe delimitar su alcance: qué oración, dato, imagen o método se atribuye. La correspondencia se comprueba en ambos sentidos: cada cita conduce a una entrada, y cada atribución refleja lo que la obra consultada afirma.[^icmje]
+La bibliografía final enumera las obras, pero no indica qué afirmación depende de cada una. Pon la cita junto a la oración, el dato, la imagen o el método que tomaste. Después revisa las dos direcciones: que cada cita tenga su entrada y que la fuente realmente respalde la atribución.[^icmje]
 
 ```anki
 deck: Física::Produção de Relatórios::Bibliografía
@@ -506,7 +506,7 @@ tags:
 > Sus entradas se redactan en el propio `.tex`, dentro de `thebibliography`, y cada una se introduce con `\bibitem`.
 ```
 
-La clave es un identificador interno elegido por el autor. Puede usar apellido y año para resultar reconocible, pero no es el número que aparecerá impreso ni tiene que coincidir con un DOI.
+La clave es un nombre interno que eliges para reconocer cada entrada. Puedes combinar apellido y año, pero la clave no es el número que saldrá impreso ni tiene por qué ser el DOI.
 
 ```latex
 \documentclass{article}
@@ -581,7 +581,7 @@ tags:
 
 #### Cita con cite
 
-`\cite{Lamport1994}` solicita la entrada de esa clave. Al compilar se comprueba que la cita impresa conduzca a la obra correcta; escribir la clave como texto ordinario no activa el sistema bibliográfico.[^docente]
+`\cite{Lamport1994}` pide al sistema bibliográfico que inserte la cita asociada a esa clave. Tras compilar, mira que la referencia impresa corresponda a la obra esperada. Si escribes la clave como texto normal, LaTeX no la tratará como una cita.[^docente]
 
 ```anki
 deck: Física::Produção de Relatórios::Bibliografía
@@ -691,7 +691,7 @@ tags:
 > [!definicion] Entrada article
 > Tipo bibliográfico para un artículo de revista; identifica, entre otros datos, título, autoría, revista y año.[^docente]
 
-El campo `journal` nombra la revista; `volume`, `number` y `pages` precisan la ubicación cuando existen. La editorial del libro no sustituye al nombre de una revista.
+En un artículo, `journal` indica la revista y `volume`, `number` y `pages` sitúan el texto cuando esos datos existen. No pongas ahí la editorial de un libro: no ocupa el lugar de la revista.
 
 ```anki
 deck: Física::Produção de Relatórios::Bibliografía
@@ -731,7 +731,7 @@ tags:
 > [!definicion] Entrada inbook
 > Tipo bibliográfico para una parte identificable de un libro mediante un capítulo o intervalo de páginas, junto con los datos del libro.[^docente]
 
-La localización de esa parte se conserva porque permite recuperar el contenido realmente usado; una referencia genérica al volumen puede resultar insuficiente.
+Indica la página o sección concreta que consultaste; una referencia al volumen entero puede no bastar para que el lector encuentre el pasaje.
 
 ```anki
 deck: Física::Produção de Relatórios::Bibliografía
@@ -941,7 +941,7 @@ tags:
 > [!definicion] Bibliografía generada
 > Archivo `.bbl` construido por BibTeX a partir de las citas registradas en `.aux`, los datos `.bib` y el estilo `.bst`, e incorporado después por LaTeX.[^docente]
 
-La secuencia completa usual es **LaTeX → BibTeX → LaTeX → LaTeX**. La primera pasada registra las peticiones; BibTeX prepara las entradas; las últimas pasadas las incorporan y estabilizan las referencias. El registro bibliográfico permite detectar claves ausentes o campos problemáticos.[^docente][^bibexterna]
+El recorrido habitual es **LaTeX → BibTeX → LaTeX → LaTeX**. La primera pasada registra las citas; BibTeX prepara la bibliografía, y las dos últimas pasadas incorporan las entradas y estabilizan las referencias. Si algo falla, revisa el registro: ahí pueden aparecer claves inexistentes o campos problemáticos.[^docente][^bibexterna]
 
 ```anki
 deck: Física::Produção de Relatórios::Bibliografía
@@ -1090,7 +1090,7 @@ tags:
 > [!definicion] Biber
 > Procesador habitual de los datos bibliográficos de `biblatex`, seleccionado mediante la opción `backend=biber`.[^bibexterna]
 
-La secuencia es LaTeX → Biber → LaTeX, con otra pasada si el registro la solicita. Usar la misma extensión `.bib` no hace intercambiables los procesadores: se ejecuta el que corresponde a la configuración real del documento.[^bibexterna]
+Con Biber, el ciclo es LaTeX → Biber → LaTeX; si el registro pide otra pasada, vuelve a ejecutar LaTeX. Que dos sistemas usen archivos `.bib` no significa que sean intercambiables: ejecuta el procesador que corresponda a la configuración del documento.[^bibexterna]
 
 ```anki
 deck: Física::Produção de Relatórios::Bibliografía
@@ -1120,7 +1120,7 @@ tags:
 
 ### Diagnóstico de referencias sin resolver
 
-Una cita pendiente puede proceder de una clave errónea, un archivo inaccesible o un procesador sin ejecutar. El diagnóstico se hace desde esas dependencias, no cambiando órdenes al azar.
+Si una cita no aparece, revisa primero que la clave exista, que LaTeX pueda encontrar el archivo y que hayas ejecutado el procesador adecuado. Cambiar órdenes al azar puede ocultar el origen del problema.
 
 > [!procedimiento] Reparar una cita
 > 1. Comparar la clave de la cita con la entrada real.
@@ -1190,25 +1190,25 @@ La misma relación entre afirmación y fuente debe conservarse al seleccionar ev
 
 ## 🧑‍🏫 Prompt para tutor conversacional
 
-Tutoriza primer curso de Produção de Relatórios. Una pregunta por turno; espera antes de mostrar solución y adapta dificultad mediante pistas, recuperación activa y repetición espaciada.
+Actúa como tutor de Produção de Relatórios para un estudiante de primer curso. Haz una pregunta cada vez y espera su respuesta antes de explicar la solución. Ajusta la dificultad con pistas, recuperación activa y repetición espaciada.
 
-Buscar exige pregunta, conceptos, términos, campos, consulta y revisión. AND intersecta conceptos, OR reúne alternativas y NOT excluye; frases y truncación dependen del buscador.
+Guía la búsqueda desde la pregunta del estudiante. Ayúdale a elegir conceptos, términos y campos, a formular la consulta y a revisar los resultados. Comprueba que distingue AND, que combina conceptos; OR, que reúne alternativas; y NOT, que excluye términos. Las frases entre comillas y la truncación dependen de cada buscador.
 
-B-on descubre recursos; el texto restringido de Ciências requiere red interna o VPN con cuenta. Comprueba autoría, título, año, tipo y versión; DOI identifica un objeto, no acredita calidad.
+Explica que B-on ayuda a descubrir recursos, mientras que algunos textos de Ciências requieren conexión a la red interna o una VPN y una cuenta institucional. Cuando el estudiante elija una fuente, revisa con él autoría, título, año, tipo de obra y versión. Un DOI ayuda a identificar un objeto, pero no demuestra que sus resultados sean de calidad.
 
-Una cita local atribuye y la referencia final identifica.
+Pídele que ponga la cita junto a la afirmación que atribuye y que compruebe que la referencia final permite identificar la obra.
 
-En LaTeX manual, cite y bibitem comparten clave y thebibliography{99} reserva anchura, no un máximo.
+En la bibliografía manual de LaTeX, muestra cómo `\cite` y `\bibitem` comparten una clave. Aclara que `\begin{thebibliography}{99}` reserva el espacio para las etiquetas; el 99 no fija un máximo de referencias.
 
-BibTeX lee aux, bib y bst y genera bbl; documentar exige LaTeX→BibTeX→LaTeX→LaTeX. Tipos: article/book/inbook/manual y campos según objeto. Bibliography omite la extensión bib; bibliographystyle elige estilo.
+Para BibTeX, recorre los archivos y pasos: lee `aux`, `bib` y `bst`, genera `bbl` y sigue el ciclo LaTeX → BibTeX → LaTeX → LaTeX. Repasa los tipos `article`, `book`, `inbook` y `manual`, eligiendo sus campos según la obra. `\bibliography` recibe la base sin la extensión `bib`; `\bibliographystyle` elige el estilo.
 
-Tocbibind puede incluir y numerar la bibliografía; la alternativa manual addcontentsline no se duplica con ella.
+Muestra cómo `tocbibind` puede incluir y numerar la bibliografía en el índice. También puedes hacerlo con `\addcontentsline`, pero no uses ambas vías a la vez porque podrías crear una entrada duplicada.
 
-Como ampliación, biblatex usa addbibresource con extensión, autocite y printbibliography con Biber.
+Como ampliación, presenta `biblatex` con `\addbibresource` —que recibe el nombre con extensión—, `\autocite` y `\printbibliography`, y explica que ese flujo se procesa con Biber.
 
-Usa una referencia al manual de Lamport identificado por el resumen docente para pedir claves y pasos, sin atribuir contenido del libro no leído. Presenta discrepancia de año o DOI y un bbl antiguo; distingue error de búsqueda, metadatos, atribución y compilación.
+Usa la referencia al manual de Lamport que identifica el resumen docente para practicar claves y pasos de compilación. No atribuyas al libro contenidos que no hayas consultado. Propón también un registro con un año o DOI discrepante y un archivo `bbl` antiguo; pide distinguir si el problema está en la búsqueda, los metadatos, la atribución o la compilación.
 
-Continúa con atribución en presentaciones y ética.
+Termina conectando el trabajo bibliográfico con la atribución en las presentaciones y con la ética académica.
 
 ```dataviewjs
 await dv.view("Planes/Estudio/Scripts/study-session", { location: "end" })

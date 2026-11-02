@@ -22,13 +22,9 @@ tags:
   - curricular
 ---
 
-```dataviewjs
-await dv.view("Planes/Estudio/Scripts/study-session", { location: "start" })
-```
-
 # Composición avanzada e índices en LaTeX
 
-Al insertar una tabla, una figura o un capítulo, cambia la paginación y puede cambiar la numeración de otros elementos. La solución consiste en declarar relaciones: una leyenda identifica un objeto, una etiqueta permite citarlo y un índice recoge la estructura. Una composición mantenible conserva esas relaciones aunque el documento crezca.[^cruzadas][^indices]
+Cuando añades una sección o una figura, LaTeX vuelve a distribuir las páginas y puede renumerar lo que viene después. Por eso no conviene escribir «véase la figura 2» a mano. Pon una leyenda a la figura, guarda su número con `\label{fig:medidas}` y cítala en el texto mediante `\ref{fig:medidas}`: al compilar, LaTeX actualiza esa referencia. El índice de contenido recoge los encabezados; las listas de figuras y tablas, sus leyendas. Si cambias el documento, vuelve a compilar y los números se ponen al día.[^cruzadas][^indices]
 
 ## Estructura lógica y objetos numerados
 
@@ -37,7 +33,7 @@ Al insertar una tabla, una figura o un capítulo, cambia la paginación y puede 
 > [!definicion] Formato semántico
 > Composición basada en identificar la función de un elemento —sección, ecuación, tabla o leyenda— y dejar que la clase y los paquetes determinen su presentación.[^indices]
 
-`\textbf{Resultados}` cambia el aspecto de unas letras; `\section{Resultados}` crea una sección. El segundo caso permite numeración e índice. La distinción se extiende a los objetos: una imagen insertada tiene un contenido gráfico; una figura numerada añade una identidad que puede usarse desde la prosa.
+Con `\textbf{Resultados}` solo pones esas palabras en negrita; `\section{Resultados}` crea una sección que LaTeX puede numerar e incluir en el índice. La misma diferencia se nota en las figuras: insertar una imagen añade contenido gráfico; ponerla en un entorno de figura y añadir una leyenda le da un número al que puedes referirte en el texto.
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -75,7 +71,7 @@ tags:
 > [!definicion] Etiqueta
 > Clave interna creada con `\label{clave}` para recuperar el número de un elemento o la página donde se encuentra.[^cruzadas]
 
-En figuras y tablas, `\label` se coloca después de `\caption`: necesita guardar el número que esa orden acaba de fijar. Claves como `fig:medidas`, `tab:periodos` y `eq:polinomio` facilitan identificar el objeto al editar. Las claves deben ser únicas y estables.
+En una figura o tabla, escribe `\label` después de `\caption`. La leyenda fija el número y la etiqueta guarda ese número para las citas. Usa claves que te ayuden a reconocer el objeto —por ejemplo, `fig:medidas`, `tab:periodos` o `eq:polinomio`— y no repitas una clave ni la cambies sin necesidad.
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -151,7 +147,7 @@ tags:
 
 #### Ejemplo — Una figura que cambia de número
 
-Si la figura marcada `fig:medidas` era la segunda y se inserta una nueva antes de ella, la mención `\ref{fig:medidas}` pasa a recuperar el número actualizado. «Figura 2» escrito a mano permanece igual y puede señalar otro objeto. La etiqueta mantiene la identidad; el número expresa la posición en la secuencia.[^cruzadas]
+Supón que `fig:medidas` señala la segunda figura y añades otra antes. La cita `\ref{fig:medidas}` mostrará ahora el número nuevo; si escribiste «figura 2» a mano, seguirá diciendo 2 y podría apuntar a la figura equivocada. La etiqueta sigue al objeto; LaTeX le asigna el número que le toca en el orden actual.[^cruzadas]
 
 ### Objetos flotantes
 
@@ -179,7 +175,7 @@ tags:
 | `p` | Página destinada a flotantes. |
 | `!` | Relaja ciertas restricciones de colocación; no fija una posición. |
 
-`[htbp]` ofrece alternativas. `[h!]` sigue siendo una petición, no una coordenada garantizada. Conviene que la prosa identifique la figura por número y explique su función, en lugar de depender de «la figura de abajo».[^tablas][^figuras]
+Con `[htbp]` le das varias opciones a LaTeX para colocar la figura. Incluso `[h!]` expresa una preferencia: no fija la posición. Al mencionar una figura, usa su número y explica qué aporta; si cambia de página, «la figura de abajo» dejará de orientar al lector.[^tablas][^figuras]
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -245,7 +241,7 @@ tags:
 > Un contenedor flotante donde pueden incorporarse leyenda, etiqueta y preferencias de colocación; la cuadrícula se construye mediante `tabular` u otro entorno.
 ```
 
-En `\begin{tabular}{lcr}`, hay tres columnas: izquierda, centro y derecha. `&` separa celdas y `\\` termina una fila. Los tipos `l`, `c` y `r` usan la anchura natural del contenido; `p{4cm}` crea una columna de párrafos de anchura fija y permite que el texto ocupe varias líneas.[^tablas][^tablasexterna]
+En `\begin{tabular}{lcr}` declaras tres columnas: alineadas a la izquierda, centradas y alineadas a la derecha. Dentro de la tabla, `&` pasa a la celda siguiente y `\\` cierra la fila. Las columnas `l`, `c` y `r` se ajustan al contenido; `p{4cm}` reserva una anchura fija de cuatro centímetros y deja que el texto se parta en varias líneas.[^tablas][^tablasexterna]
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -335,7 +331,7 @@ La misma disposición numérica puede componerse dentro de una fórmula mediante
 \end{equation*}
 ```
 
-`tabular` permite construir una tabla de texto; `array` integra la disposición en el modo matemático. Los datos no cambian al elegir uno u otro.[^tablas][^ecuaciones]
+Usa `tabular` para componer una tabla de texto y `array` cuando necesites una disposición en modo matemático. Cambiar de entorno modifica la composición, no los datos.[^tablas][^ecuaciones]
 
 Para comparar los marcos, el mismo contenido puede envolverse de estas dos formas:
 
@@ -372,7 +368,7 @@ tags:
 
 #### Ejemplo — Tabla y referencia completas de la ficha 2
 
-La tarea consiste en reproducir las cuatro columnas y cuatro filas, centrar tabla y contenido, sombrear y destacar el encabezado y colocar la leyenda debajo. Los valores siguientes son los datos del ejercicio de composición; no constituyen una verificación zoológica.[^ficha]
+Reproduce las cuatro columnas y las cuatro filas del ejercicio. Centra la tabla y su contenido, destaca el encabezado con sombreado y coloca la leyenda debajo. Los valores son los que da la ficha para practicar la composición; no se presentan como datos zoológicos verificados.[^ficha]
 
 ```latex
 \documentclass[a4paper,11pt]{report}
@@ -448,7 +444,7 @@ tags:
 \end{tabularx}
 ```
 
-`\linewidth` toma la anchura de la línea en el contexto actual. Reducir la tabla de 10 cm a 6 cm redistribuye el texto en más renglones: no modifica sus datos. Es una solución distinta de reducir toda la tabla como una imagen.[^tablas]
+`\linewidth` representa el ancho disponible en ese punto del documento. Si pasas una tabla de 10 cm a 6 cm, el texto se repartirá en más líneas, pero los datos seguirán iguales. Así ajustas la tabla al espacio; no la conviertes en una imagen reducida.[^tablas]
 
 #### Ejemplo — Una misma tabla con 10 y 6 centímetros
 
@@ -547,7 +543,7 @@ tags:
 
 #### Ejemplo — Unir filas y columnas en la misma tabla
 
-**Tarea.** Componer la tabla docente con dos columnas bajo un encabezado común, dos agrupaciones de filas y una columna de valores en nanómetros.[^tablas]
+**Tarea.** Compón la tabla del material con dos columnas bajo un encabezado común, dos grupos de filas y una columna de valores en nanómetros.[^tablas]
 
 ```latex
 % Preámbulo: \usepackage{multirow}
@@ -691,7 +687,7 @@ tags:
 > `booktabs`; las órdenes generadas determinan las dependencias que deben cargarse antes de compilar.
 ```
 
-El material propone Excel2LaTeX: se obtiene el complemento, se abre en Excel y se utiliza su función de exportación para generar el código de las celdas seleccionadas. La interfaz depende de la instalación. El código obtenido se copia al fuente y se identifican sus dependencias, como `xcolor` para colores o `booktabs` para `\toprule`, `\midrule` y `\bottomrule`. Después se comprueban valores, unidades, caracteres especiales, anchura y legibilidad. Exportar automatiza la transcripción; no valida los datos ni decide qué comparación necesita el informe.[^tablas]
+Para pasar una tabla de Excel a LaTeX, instala el complemento Excel2LaTeX y ábrelo desde Excel; la forma de hacerlo depende de tu instalación. Selecciona las celdas y genera el código. Al pegarlo en el fuente, carga los paquetes que use: por ejemplo, `xcolor` para los colores o `booktabs` para `\toprule`, `\midrule` y `\bottomrule`. Compara después el PDF con la hoja original: revisa valores, unidades, caracteres, anchura y legibilidad. La exportación ahorra trabajo al copiar las celdas, pero no valida los datos ni decide qué comparación necesita el informe.[^tablas]
 
 > [!procedimiento] De la hoja de cálculo al documento
 > 1. Obtener el complemento Excel2LaTeX y abrirlo en Excel según su instalación.
@@ -732,7 +728,7 @@ En una ruta con `pdflatex` se usan habitualmente PDF, PNG o JPEG. `\includegraph
 \end{figure}
 ```
 
-Este fragmento requiere aportar `medidas.pdf`. El bloque incluye la imagen; la leyenda identifica la evidencia y la prosa que la cita interpreta el resultado. Una figura legible conserva los rótulos al tamaño final del PDF.
+Para compilar este ejemplo, coloca `medidas.pdf` en la ruta indicada en el archivo fuente. Escribe en la leyenda qué muestra la imagen y explica en el informe qué significa ese resultado. Comprueba que los rótulos sigan leyéndose en el PDF al tamaño final.
 
 Las variantes `\includegraphics[scale=.5]{medidas.pdf}` y `\scalebox{.5}{\includegraphics{medidas.pdf}}` aplican un factor de escala. `width=.65\linewidth` fija una anchura relativa al contexto; el mismo factor `.5` puede producir anchuras distintas si los archivos originales tienen tamaños diferentes.[^figuras]
 
@@ -788,7 +784,7 @@ Las anchuras y separaciones deben caber en la línea. Para tres paneles puede as
 
 #### Ejemplo — Tres paneles con leyendas propias
 
-**Tarea.** Disponer tres imágenes, cada una identificada por su condición, y una leyenda común. Los tres archivos indicados deben estar disponibles.
+**Tarea.** Coloca las tres imágenes en la misma fila, identifica la condición que muestra cada una y escribe una leyenda común. Comprueba que estén disponibles los tres archivos indicados.
 
 ```latex
 % Preámbulo: \usepackage{graphicx,subcaption}
@@ -926,7 +922,7 @@ tags:
 > [!definicion] Bloque quote
 > Entorno de composición de una cita o fragmento separado del párrafo principal mediante márgenes.[^bloques]
 
-`\begin{quote}...\end{quote}` cambia la disposición del fragmento. La atribución se escribe junto a la cita con el sistema bibliográfico correspondiente; el entorno sólo compone el texto. Separación visual y reconocimiento de autoría cumplen funciones distintas.
+El entorno `\begin{quote}...\end{quote}` da formato al fragmento citado, pero no indica de quién son las palabras. Añade la atribución junto a la cita con el sistema bibliográfico que estés usando: el formato y el reconocimiento de autoría son dos cosas distintas.
 
 ```latex
 Texto que introduce una cita atribuida:
@@ -935,7 +931,7 @@ Texto que introduce una cita atribuida:
 \end{quote}
 ```
 
-Este fragmento es una plantilla de composición: en una entrega se reemplaza por la cita real y su referencia. El cambio de márgenes permite identificar el bloque, pero no aporta el nombre del autor ni la localización de la fuente.[^bloques]
+Este fragmento solo muestra cómo componer una cita. En la entrega, sustitúyelo por el pasaje real y añade su referencia. Los márgenes separan visualmente el bloque, pero no dicen quién escribió esas palabras ni dónde encontrar la fuente.[^bloques]
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -955,7 +951,7 @@ tags:
 > [!definicion] Verbatim
 > Entorno que muestra literalmente el contenido, conservando caracteres que normalmente serían interpretados como órdenes.[^bloques]
 
-Sirve para enseñar el propio código LaTeX o un fragmento técnico. El entorno básico existe sin cargar paquetes; el paquete `verbatim` amplía sus posibilidades. La presentación de programas con lenguaje, numeración y leyendas se desarrolla mediante [[Física/Grado/1º/Produção de Relatórios/07 Listados de código con listing y listings|listings]]. Mostrar código no lo ejecuta ni comprueba su resultado.
+Puedes usarlo para mostrar el código LaTeX del propio documento o un fragmento técnico. El entorno básico está disponible sin cargar paquetes; el paquete `verbatim` añade posibilidades. Para presentar programas con lenguaje, numeración y leyenda, consulta [[Física/Grado/1º/Produção de Relatórios/07 Listados de código con listing y listings|listings]]. El código que se muestra en el PDF no se ejecuta ni se valida por aparecer allí.
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -984,7 +980,7 @@ Segundo parágrafo do bloco.
 \end{multicols}
 ```
 
-El argumento puede cambiarse a `3` para tres columnas. Se comprueba que el ancho disponible permite leer las fórmulas, tablas y figuras previstas. `multicols`, `\multicolumn` y `minipage` resuelven problemas diferentes: flujo de prosa, unión de celdas y caja de anchura fijada, respectivamente.
+Si necesitas tres columnas, cambia el argumento a `3`. Antes de dejarlo así, mira si las fórmulas, tablas y figuras siguen cabiendo y se pueden leer. Recuerda que cada herramienta resuelve algo distinto: `multicols` reparte la prosa, `\multicolumn` une celdas y `minipage` reserva una caja de ancho fijo.
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -1036,7 +1032,7 @@ tags:
 
 ## Ecuaciones de varias líneas y matrices
 
-La elección del entorno depende de qué constituye una unidad matemática: una relación larga, una cadena de transformaciones o varias ecuaciones independientes. Los ejemplos siguientes requieren `\usepackage{amsmath}` en el preámbulo. Las letras de los ejemplos algebraicos representan variables reales y las igualdades expresan las relaciones que se desea componer; no son datos de un experimento. $S$ nombra una suma, $p$ un polinomio y las letras con subíndice identifican sus términos o variables.[^ecuaciones]
+Elige el entorno según lo que quieras mostrar: una relación larga, varios pasos de una misma derivación o ecuaciones independientes. Para los ejemplos que siguen, carga `\usepackage{amsmath}` en el preámbulo. Las letras son variables reales y las igualdades muestran cómo se compone cada expresión; no son medidas experimentales. Aquí $S$ representa una suma y $p$ un polinomio; las letras con subíndice distinguen sus términos o variables.[^ecuaciones]
 
 ### equation y numeración
 
@@ -1197,7 +1193,7 @@ tags:
 \end{gather}
 ```
 
-Es adecuado si no se desea destacar una columna de igualdades. Se elige por la relación visual entre ecuaciones, no simplemente porque haya dos líneas.
+Usa `gather` cuando quieras centrar varias ecuaciones sin alinear los signos de igualdad. Elige este formato por cómo se leen juntas, no solo porque haya más de una línea.
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -1435,7 +1431,7 @@ tags:
 
 La matriz tiene tres filas y tres columnas; cada fila contiene dos separadores. Las barras simples se usan a menudo para determinantes y las dobles para normas, pero el entorno sólo imprime delimitadores: la operación y su significado deben declararse en el argumento matemático.
 
-Las [[Matemáticas/Álgebra lineal/Matrices|matrices]] permiten organizar estos números por filas y columnas. Para comparar únicamente los delimitadores se conserva el mismo contenido en todos los ejemplos siguientes.[^matrices]
+Una [[Matemáticas/Álgebra lineal/Matrices|matriz]] ordena estos números en filas y columnas. En los ejemplos siguientes mantengo las mismas entradas para que puedas comparar solo los delimitadores.[^matrices]
 
 ### matrix: sin delimitadores
 
@@ -1578,7 +1574,7 @@ $$
 \begin{Vmatrix}1&2\\3&4\end{Vmatrix}.
 $$
 
-Las barras dobles pueden utilizarse en una notación de norma, cuya definición debe indicarse. Elegir este entorno no determina por sí solo qué norma se utiliza.[^matrices]
+Puedes escribir una norma entre barras dobles, pero indica qué norma estás usando: `Vmatrix` solo imprime los delimitadores, no define la operación.[^matrices]
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -1963,7 +1959,7 @@ tags:
             top=2.5cm,bottom=2cm]{geometry}
 ```
 
-Las dimensiones anteriores reproducen un ejemplo del capítulo II; no se presentan como norma universal de FCUL. Una entrega concreta puede fijar otros márgenes. Modificarlos cambia anchuras de línea, saltos y posición de flotantes; por eso la revisión se realiza sobre el documento completo.
+Las dimensiones anteriores son las del ejemplo del capítulo II, no una norma general de FCUL. La entrega puede pedir otros márgenes. Al cambiarlos, también cambian el ancho de las líneas, los saltos de página y la posición de las figuras; revisa el informe entero después de compilar.
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -2065,7 +2061,7 @@ La portada incluye nombre completo, número de alumno, título, licenciatura, tu
 \pagenumbering{arabic}
 ```
 
-La introducción pide investigar cambios de hábitos de consumo, incorporar una cita y comparar en dos columnas cómo se actuaba y cómo se actuará. Los ejemplos personales deben corresponder a la experiencia o intención real de su autor. El caso de estudio comienza con una introducción de hasta cinco líneas que incluya sus parámetros de capacidad individual y número de trabajadores.[^zuloc]
+El enunciado pide investigar los cambios en los hábitos de consumo, incluir una cita y comparar en dos columnas las prácticas anteriores con las futuras. Esos ejemplos deben reflejar la experiencia o intención real de quien firma. Para el caso de estudio, pide una introducción de hasta cinco líneas con la capacidad individual y el número de trabajadores.[^zuloc]
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -2105,7 +2101,7 @@ tags:
 > [!definicion] Plantilla inicial de Zuloc
 > Número $n$ de trabajadores fijado como el producto de tres dígitos no nulos del número de alumno.[^zuloc]
 
-Si existen más de tres dígitos no nulos y su elección cambia el producto, el enunciado no especifica cómo seleccionarlos. Los parámetros personales deben quedar explícitos antes de calcular.
+Si el número de alumno tiene más de tres dígitos no nulos y escoger otros cambia el producto, el enunciado no dice cuáles usar. Deja claros los parámetros personales antes de empezar los cálculos.
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -2151,7 +2147,7 @@ tags:
 > [!definicion] Probabilidad acumulada
 > Para valores de demanda ordenados, suma de las probabilidades de todos los valores hasta el considerado. Establece los umbrales sucesivos de la selección por intervalos.[^zuloc]
 
-Por ejemplo, las probabilidades 9 %, 14 % y 21 % producen acumuladas de 9 %, 23 % y 44 %. La probabilidad de un intervalo se recupera restando sus umbrales consecutivos.
+Por ejemplo, al acumular 9 %, 14 % y 21 % se obtienen 9 %, 23 % y 44 %. Para hallar la probabilidad de un intervalo, resta sus dos umbrales consecutivos.
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -2182,7 +2178,7 @@ Una variable aleatoria uniforme $U_t$ permite asignar cada valor mediante probab
 | $0{,}70<U_t\le0{,}89$ | 7000 | 19 % |
 | $0{,}89<U_t\le1$ | 7500 | 11 % |
 
-Las probabilidades suman 100 %. Cada intervalo tiene longitud igual a la probabilidad asignada y los intervalos cubren $[0,1]$ sin solaparse. Por ejemplo, $U_t=0{,}09$ produce 5000. Cambiar la inclusión de los extremos no cambia las probabilidades de una uniforme continua, pero puede cambiar los resultados de una lista de números redondeados; se conserva la convención docente.[^zuloc]
+Los seis intervalos cubren $[0,1]$ sin solaparse, y cada uno ocupa una longitud igual a la probabilidad asignada; en total, las probabilidades suman 100 %. Por ejemplo, con $U_t=0{,}09$ se eligen 5000 embalajes. Para una variable uniforme continua, incluir o excluir un extremo no cambia la probabilidad. En una lista de números redondeados sí puede cambiar qué pedido sale en un límite; por eso se conserva la convención del enunciado.[^zuloc]
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -2243,7 +2239,7 @@ tags:
 > Y_t=\min(W_t,C).
 > $$
 
-Así se cumplen simultáneamente $0\le Y_t\le C$ y $Y_t\le W_t$. Elegir el máximo violaría una de esas restricciones cuando capacidad y carga fueran distintas.
+Con esta regla, la producción cumple a la vez $0\le Y_t\le C$ y $Y_t\le W_t$. Elegir siempre el mayor de la capacidad y la carga rompería una de esas condiciones cuando no coincidieran.
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -2306,7 +2302,7 @@ tags:
 
 **Tarea.** Comprobar dos días ilustrativos con $q=70$, $n=100$, pedidos de 7500 y 6500 embalajes y atraso inicial cero. Los parámetros son didácticos y no sustituyen los personales de una entrega.
 
-La capacidad es $C=100\cdot70=7000$ embalajes diarios. El primer día se produce $\min(7500,7000)=7000$ y quedan 500 pendientes, con ocupación 100 %. El segundo día la carga es $6500+500=7000$: se atiende completa y el atraso vuelve a cero. En ambos días se verifica $Y_t+B_t=W_t$, que expresa la conservación de pedidos.[^zuloc]
+Con $n=100$ y $q=70$, la capacidad diaria es $C=7000$ embalajes. El primer día llegan 7500 pedidos: se producen 7000, quedan 500 pendientes y la ocupación es del 100 %. Al día siguiente se suman los 6500 pedidos nuevos a esos 500 pendientes. La carga vuelve a ser 7000, se completa y el atraso queda en cero. En los dos días, producción más atraso coincide con la carga: $Y_t+B_t=W_t$.[^zuloc]
 
 La tabla de ocho columnas permite comprobar el recorrido completo de los dos días. Los aleatorios 0,95 y 0,50 son ilustrativos y generan los pedidos usados:
 
@@ -2330,7 +2326,7 @@ tags:
 > Duplicar la hoja como B, sustituir sus aleatorios por la serie proporcionada, ajustar la plantilla y presentar la introducción, tabla y gráfico de columnas correspondientes.
 ```
 
-El enunciado exige comparar el número elegido de trabajadores con $n-1$ y $n+1$, aportando resultados numéricos. Mantener la misma secuencia de pedidos permite atribuir las diferencias al cambio de capacidad. Sin costes y sin un umbral de servicio especificados, esos resultados no determinan un óptimo económico único.[^zuloc]
+El enunciado pide comparar el número elegido de trabajadores con $n-1$ y $n+1$ y presentar los resultados numéricos. Usa la misma secuencia de pedidos en los tres casos para que las diferencias se deban al cambio de capacidad. Como no se especifican costes ni un umbral de servicio, esas cifras no determinan un único óptimo económico.[^zuloc]
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -2360,9 +2356,9 @@ tags:
 
 ### Límites del enunciado y de los datos disponibles
 
-La tabla exige días 1–31 y la instrucción del gráfico menciona 30 días: ambos horizontes aparecen en el documento y son incompatibles si se supone una única serie completa. La parte B puede omitirse bajo una condición de corrección de A, pero la presentación exige tabla y gráfico de B. Además, no se ha aportado el Word que contiene sus números aleatorios. Estas condiciones impiden reconstruir una entrega B única a partir del material disponible.[^zuloc]
+Hay dos discrepancias en el enunciado que conviene dejar a la vista. La tabla llega hasta el día 31, pero la instrucción del gráfico habla de 30 días; no pueden describir a la vez una misma serie completa. Además, se dice que la parte B puede omitirse si A está bien, aunque la presentación pide la tabla y el gráfico de B. El archivo Word con los números aleatorios tampoco está disponible. Con esos datos no se puede reconstruir una única versión de la entrega B.[^zuloc]
 
-Las afirmaciones ambientales utilizadas para justificar el proyecto necesitan fuentes propias y actuales; los valores del ejercicio se distinguen de los datos empíricos que se afirmen sobre el mundo. La [[Física/Grado/1º/Produção de Relatórios/04 Búsqueda bibliográfica y referencias|búsqueda y atribución de fuentes]] permite sostener ese contexto.
+Si justificas el proyecto con afirmaciones sobre el impacto ambiental, busca fuentes actuales que las respalden. Separa esos datos del mundo real de los valores que el ejercicio da para la simulación. Para documentarlos, consulta [[Física/Grado/1º/Produção de Relatórios/04 Búsqueda bibliográfica y referencias|búsqueda y atribución de fuentes]].
 
 ## Práctica con soluciones razonadas
 
@@ -2372,7 +2368,7 @@ Las afirmaciones ambientales utilizadas para justificar el proyecto necesitan fu
 > El PDF contiene títulos escritos en negrita y `\tableofcontents` está vacío. ¿Qué cambio debe hacerse y por qué puede necesitar otra compilación?
 
 > [!resolucion]- Resolución
-> Se sustituyen los títulos manuales por `\section` o el nivel apropiado. La compilación registra entradas auxiliares y otra pasada las lee. El error frecuente consiste en rellenar el índice a mano: los cambios de estructura o páginas dejan entonces referencias obsoletas.
+> Cambia los títulos escritos a mano por órdenes como `\section` o por el nivel que corresponda. Compila para que LaTeX registre las entradas y vuelve a compilar para que las lea y actualice el índice. Si lo rellenas manualmente, los cambios de títulos o páginas pueden dejarlo desfasado.
 
 #### Ejercicio 2 — Reparar una referencia de tabla
 
@@ -2380,7 +2376,7 @@ Las afirmaciones ambientales utilizadas para justificar el proyecto necesitan fu
 > Una tabla tiene `\label{tab:datos}` antes de `\caption{Dados}` y la referencia devuelve otro número. Describe la reparación y la comprobación.
 
 > [!resolucion]- Resolución
-> Se coloca la etiqueta después de la leyenda para capturar el contador correcto. Se comprueba que la clave es única y coincide con `\ref`, se recompila y se compara la mención con la leyenda del PDF. Si persiste «??», el registro permite distinguir una clave ausente de una actualización pendiente.
+> Mueve `\label` detrás de `\caption` para que guarde el número correcto. Comprueba que la clave sea única y coincida con la de `\ref`; compila y mira si la mención coincide con la leyenda en el PDF. Si aún aparece «??», revisa el registro de compilación: puede faltar la clave o quedar pendiente otra pasada.
 
 #### Ejercicio 3 — Elegir entorno matemático
 
@@ -2388,7 +2384,7 @@ Las afirmaciones ambientales utilizadas para justificar el proyecto necesitan fu
 > Escoge un entorno para una suma demasiado larga, una derivación con un solo número, tres ecuaciones alineadas y una función definida por condiciones. Justifica cada elección.
 
 > [!resolucion]- Resolución
-> `multline` parte una expresión sin punto común; `equation` con `split` conserva una derivación y un número; `align` ofrece filas alineadas con numeración independiente; `cases`, dentro de un modo matemático, relaciona expresiones y condiciones. Las condiciones de validez incluyen que la función por tramos tenga un dominio declarado y condiciones coherentes.
+> Usa `multline` si la expresión es larga y no necesita un punto común de alineación; `equation` con `split` divide una derivación y le asigna un solo número; `align` alinea varias filas y numera cada una; `cases` coloca cada expresión junto a su condición. La función por tramos también necesita una revisión matemática: declara su dominio y comprueba las condiciones de validez de cada caso.
 
 #### Ejercicio 4 — Transferir la tabla de la ficha
 
@@ -2396,9 +2392,9 @@ Las afirmaciones ambientales utilizadas para justificar el proyecto necesitan fu
 > Partiendo del ejemplo de suricatas, explica cómo mantener el contenido si una columna desborda y cómo conservar la referencia al mover la tabla a otro capítulo.
 
 > [!resolucion]- Resolución
-> Se decide una anchura de párrafo `p{...}` o se usa `tabularx` para redistribuir texto; se revisan legibilidad y unidades antes de reducir toda la tabla. Se conserva la clave `tab:suricatas` y se cita con `\ref`; al moverla cambia su número, no la identidad de la etiqueta. Las compilaciones actualizan la referencia y el índice de tablas.
+> Dale más espacio a la columna con `p{...}` o usa `tabularx` para que el texto se reparta en varias líneas. Antes de reducir la tabla entera, comprueba que sigan leyéndose los datos y las unidades. Conserva la clave `tab:suricatas` y cítala con `\ref`: al mover la tabla cambiará su número, pero la clave seguirá señalando el mismo objeto. Vuelve a compilar para actualizar la cita y la lista de tablas.
 
-La estructura y las referencias cruzadas mantienen coherente el interior del informe. La [[Física/Grado/1º/Produção de Relatórios/04 Búsqueda bibliográfica y referencias|gestión bibliográfica]] resuelve la otra relación imprescindible: que cada afirmación apoyada en trabajos ajenos permita recuperar su fuente.
+Las referencias cruzadas mantienen al día los números de secciones, tablas y figuras; las citas bibliográficas ayudan a localizar las fuentes de las afirmaciones que tomas de otros trabajos. Para estas últimas, consulta [[Física/Grado/1º/Produção de Relatórios/04 Búsqueda bibliográfica y referencias|gestión bibliográfica]].
 
 ## 📚 Fuentes
 
@@ -2427,27 +2423,27 @@ La estructura y las referencias cruzadas mantienen coherente el interior del inf
 
 ## 🧑‍🏫 Prompt para tutor conversacional
 
-Tutoriza a nivel universitario introductorio con una pregunta cada vez, espera y ofrece pistas antes de resolver.
+Guía al estudiante como en una tutoría de primer curso universitario: haz una pregunta cada vez, espera su respuesta y ofrece una pista antes de explicar la solución.
 
-Examina función lógica frente a formato: section crea estructura; textbf cambia aspecto. Caption fija número, label guarda identidad, ref recupera número y pageref página; label va después de caption.
+Empieza comparando dos órdenes: `\section` crea una sección y `\textbf` solo cambia el aspecto del texto. Después pide que explique cómo se cita una figura o una tabla: `\caption` fija el número, `\label` guarda la identidad del objeto, `\ref` recupera el número y `\pageref` señala la página. Comprueba que recuerde poner `\label` después de `\caption`.
 
-Figure/table son flotantes, y h/t/b/p/! expresan preferencias.
+Cuando paséis a figuras y tablas, aclara que `figure` y `table` son flotantes. Las opciones `h`, `t`, `b`, `p` y `!` orientan su colocación, pero no fijan una coordenada.
 
-Tabular construye filas y columnas con &, doble barra y l/c/r/p; table aporta flotación y leyenda. Tabularx con X ajusta anchura; multicolumn une columnas sin multicol; multirow une filas y exige dejar celdas ocupadas vacías; arraystretch escala separación vertical y tabcolsep se modifica con setlength.
+Pídele que componga una tabla con `tabular`: `&` separa celdas, `\\` termina una fila y `l`, `c`, `r` y `p` controlan la disposición de las columnas. Luego comparadlo con `table`, que contiene el flotante y su leyenda. `tabularx` usa `X` para ajustar la anchura; `\multicolumn` une columnas sin el paquete `multicol`; `multirow` une filas y obliga a dejar vacías las otras celdas que ocupa. Muestra cómo `\arraystretch` cambia la separación vertical y cómo `\tabcolsep` se modifica con `\setlength`.
 
-Graphicx incorpora PDF/PNG/JPEG; subcaption dispone paneles. Minipage crea cajas; quote compone citas y verbatim muestra literal. Multicols distribuye prosa.
+Para las imágenes, repasa cómo `graphicx` incorpora archivos PDF, PNG y JPEG y cómo `subcaption` organiza paneles. Compara `minipage`, que reserva una caja, con `quote`, que da formato a una cita, y `verbatim`, que muestra el contenido literalmente. `multicols` permite repartir la prosa en columnas.
 
-Con amsmath, equation da un número, split parte una derivación dentro de equation, multline parte una expresión sin alineación, gather agrupa sin alinear, align alinea filas, flalign extiende horizontalmente, array y cases organizan condiciones; pmatrix/bmatrix/Bmatrix/vmatrix/Vmatrix eligen delimitador, no significado.
+Dedica un ejercicio a `amsmath`. Pregunta cuándo usar `equation` para numerar una ecuación, `split` para dividir una derivación dentro de `equation`, `multline` para continuar una expresión sin alinear, `gather` para agrupar ecuaciones sin alinearlas, `align` para alinearlas y `flalign` para extenderlas horizontalmente. Después compara `array` y `cases` al organizar condiciones. Aclara que `pmatrix`, `bmatrix`, `Bmatrix`, `vmatrix` y `Vmatrix` cambian los delimitadores de una matriz, no su significado.
 
-Tableofcontents recoge secciones, listoffigures y listoftables leyendas; el índice remisivo usa makeidx, makeindex, index y printindex, con idx→ind e ilg de registro.
+Pide distinguir el índice de contenido, que se obtiene con `\tableofcontents`, de las listas de figuras y tablas, que reúnen las leyendas mediante `\listoffigures` y `\listoftables`. Para el índice remisivo, repasa `makeidx`, `makeindex`, `\index` y `\printindex`, y el recorrido de los archivos `idx`, `ind` e `ilg`.
 
-Maketitle compone portada; pagenumbering elige esquema y reinicia contador, thispagestyle oculta campos; fancyhdr configura seis zonas y geometry márgenes. Input inserta y include añade límites de página.
+Repasa también la portada, la numeración y la división del documento: `\maketitle` compone la portada; `\pagenumbering` elige el sistema de numeración y reinicia el contador; `\thispagestyle` oculta los campos de una página; `fancyhdr` configura seis zonas y `geometry` los márgenes. Compara `\input`, que inserta un archivo, con `\include`, que además introduce límites de página.
 
-Como aplicación, el informe Zuloc exige portada, índices automáticos, introducción, caso, conclusión y bibliografía, con 12 puntos y márgenes de 1,7 cm verticales y 1,6 cm horizontales. La portada queda sin número, encabezado ni pie; índices romanos y cuerpo arábigo. La introducción contrasta hábitos propios en columnas e incorpora una cita.
+Usa el informe Zuloc para reunir estos recursos. Pide localizar la portada, los índices automáticos, la introducción, el caso, la conclusión y la bibliografía. El documento exige letra de 12 puntos y márgenes de 1,7 cm arriba y abajo y 1,6 cm a los lados. La portada no lleva número, encabezado ni pie; los índices se numeran con romanos y el cuerpo con arábigos. En la introducción se comparan en dos columnas los hábitos propios anteriores y los que se quieren adoptar, y se incorpora una cita.
 
-En la simulación, $q=50+$ suma de dígitos del número de alumno; $n$ es el producto de tres dígitos no nulos y $C=nq$. Los pedidos $D_t$ toman 5000, 5500, 6000, 6500, 7000 o 7500 con probabilidades 9, 14, 21, 26, 19 y 11 %. Con $B_0=0$, carga $W_t=D_t+B_{t-1}$, producción $Y_t=\min(W_t,C)$, atraso $B_t=W_t-Y_t$ y ocupación $100Y_t/C$ por ciento, para $C>0$. Comprueba que producción y atraso conservan la carga. Compara $n-1,n,n+1$ con los mismos pedidos y resultados numéricos. No inventes parámetros personales ni la serie B ausente; identifica las contradicciones 31/30 días y omisión de B frente a diapositivas obligatorias de B.
+En la simulación, define $q=50+$ la suma de los dígitos del número de alumno, $n$ como el producto de tres dígitos no nulos y $C=nq$. Los pedidos $D_t$ pueden ser 5000, 5500, 6000, 6500, 7000 o 7500, con probabilidades del 9, 14, 21, 26, 19 y 11 %, respectivamente. Partiendo de $B_0=0$, calcula la carga $W_t=D_t+B_{t-1}$, la producción $Y_t=\min(W_t,C)$, el atraso $B_t=W_t-Y_t$ y la ocupación $100Y_t/C$ por ciento, para $C>0$. Pídele comprobar que producción y atraso suman la carga, y comparar $n-1$, $n$ y $n+1$ con los mismos pedidos y resultados numéricos. No completes con datos inventados los parámetros personales ni la serie B que falta. Señala la discrepancia entre los 31 días de la tabla y los 30 del gráfico, y la contradicción entre poder omitir B y tener que incluir sus diapositivas.
 
-Propón reparar un índice vacío, una etiqueta adelantada y una tabla que desborda. Haz justificar numeración y condiciones de una función por tramos. Adapta dificultad con recuperación activa, repetición espaciada y transferencia; continúa con bibliografía.
+Para terminar, plantea cómo reparar un índice vacío, una etiqueta puesta antes de la leyenda y una tabla que se sale del margen. Pide justificar la numeración y las condiciones de una función definida por tramos. Ajusta la dificultad con recuperación activa, repetición espaciada y ejercicios que transfieran lo aprendido a casos nuevos; después sigue con bibliografía.
 
 ```dataviewjs
 await dv.view("Planes/Estudio/Scripts/study-session", { location: "end" })

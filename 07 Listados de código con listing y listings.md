@@ -32,7 +32,7 @@ await dv.view("Planes/Estudio/Scripts/study-session", { location: "start" })
 
 # Listados de código con listing y listings
 
-El código fuente conserva relaciones que la prosa ordinaria no representa bien: sangrías, saltos de línea, comentarios y caracteres especiales. Un informe debe mostrar esas relaciones sin alterarlas y explicar qué papel cumple el programa en el procedimiento. El capítulo 5 del resumen docente utiliza el paquete plural **`listings`** y sus órdenes `\lstset` y `lstlisting`; esa evidencia permite identificar la herramienta efectivamente desarrollada.[^docente]
+Al copiar código a un informe, conserva sus sangrías, saltos de línea, comentarios y caracteres especiales. También explica qué hizo el programa dentro del procedimiento. El capítulo 5 del resumen docente trabaja con el paquete plural **`listings`** y sus órdenes `\lstset` y `lstlisting`.[^docente]
 
 ## Del programa a su representación
 
@@ -41,7 +41,7 @@ El código fuente conserva relaciones que la prosa ordinaria no representa bien:
 > [!definicion] Listado de código
 > Representación de un fragmento de programa que conserva sus caracteres y estructura y permite identificarlo y comentarlo dentro de un documento.[^docente]
 
-Una lista de números puede ser salida de un cálculo; un listado es el texto del programa. Para valorar un método computacional se necesitan ambas relaciones: qué operaciones describe el código y qué resultados produjo al ejecutarse con las entradas declaradas.
+Una lista de números puede ser el resultado de un cálculo; un listado muestra el texto del programa. Para evaluar el método, mira tanto qué operaciones aparecen en el código como qué resultado produjo al ejecutarlo con las entradas declaradas.
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -61,7 +61,7 @@ tags:
 > [!definicion] Composición de código
 > Tratamiento del programa como contenido que debe imprimirse, con sus espacios y estilos, sin ejecutarlo como un programa del lenguaje mostrado.[^listings]
 
-LaTeX procesa las instrucciones de composición. `language=Python` permite reconocer palabras del lenguaje para presentarlas; no llama a Python ni comprueba el algoritmo. Un error sintáctico de Python puede aparecer perfectamente compuesto en el PDF. La corrección del programa y la fidelidad del listado requieren comprobaciones propias.
+LaTeX procesa las órdenes de composición. `language=Python` le indica cómo reconocer y presentar las palabras del lenguaje; no ejecuta Python ni comprueba el algoritmo. Por eso, incluso un programa con errores de sintaxis puede quedar bien compuesto en el PDF. Ejecuta y revisa el programa por separado, y comprueba que el listado conserve fielmente el código.
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -94,7 +94,7 @@ tags:
 > [!definicion] Representación literal
 > Disposición del texto sin interpretar sus caracteres como órdenes de LaTeX. El entorno básico `verbatim` permite mostrar literalmente fragmentos.[^verbatim]
 
-Es útil para enseñar una orden o un bloque breve sin tratamiento sintáctico. `listings` añade selección de lenguaje, estilos, números y otras opciones de composición que un bloque literal básico no organiza de la misma forma.
+Usa `verbatim` para mostrar una orden o un fragmento breve tal como está escrito, sin reconocimiento del lenguaje. `listings` ofrece además opciones para elegir lenguaje, aplicar estilos, numerar líneas y ajustar la composición.
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -136,7 +136,7 @@ tags:
 > [!definicion] Paquete listing
 > Extensión distinta que ofrece un entorno `listing` no flotante con leyenda, etiqueta, referencia e índice de listados. No aporta las órdenes `\lst...` del paquete plural.[^listing]
 
-El contenedor singular permite numerar un bloque; su interior necesita una representación literal adecuada. El ejemplo se compila por separado de los ejemplos del paquete plural:
+El entorno singular permite añadir un número al bloque, pero el contenido también debe mostrarse de forma literal. Este ejemplo se compila por separado de los del paquete plural:
 
 ```latex
 \documentclass{article}
@@ -272,9 +272,9 @@ tags:
 > [!definicion] Conservación de espacios
 > Presentación que mantiene la separación y sangría del programa, por ejemplo mediante `keepspaces=true`, para representar fielmente su organización.[^listings]
 
-`basicstyle=\ttfamily\small` usa una tipografía monoespaciada; `showstringspaces=false` evita marcas visibles de espacio dentro de cadenas. `breaklines=true` permite dividir visualmente líneas largas. El salto de composición no modifica el archivo del programa; debe seguir siendo posible reconocer dónde termina cada línea real.[^listings]
+`basicstyle=\ttfamily\small` compone el listado en letra monoespaciada y pequeña. `showstringspaces=false` oculta las marcas que señalarían espacios dentro de cadenas. Con `breaklines=true`, las líneas largas pueden partirse en el PDF; ese ajuste no cambia el archivo del programa, así que el lector todavía debe poder distinguir dónde termina cada línea real.[^listings]
 
-En Python, una sangría distinta puede cambiar la estructura o hacer inválido el programa. Al reconstruir ejemplos del resumen se conserva una indentación válida; la pérdida de sangría en su representación no se adopta como sintaxis del lenguaje.[^docente]
+En Python, cambiar la sangría puede alterar los bloques o volver inválido el programa. Por eso, al reconstruir los ejemplos del resumen, se conserva una indentación válida aunque en la representación original se haya perdido.[^docente]
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -333,7 +333,7 @@ tags:
 > [!definicion] Numeración de líneas
 > Marcadores de posición que permiten localizar partes de un listado sin introducir esos números en el programa.[^docente]
 
-La combinación docente `numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt` sitúa un número pequeño a la izquierda de cada línea y lo separa 5 puntos del código. `stepnumber` controla el intervalo entre números. Esa numeración ayuda a comentar una operación concreta en la prosa.
+Con `numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt` aparece un número pequeño a la izquierda de cada línea, separado cinco puntos del código. `stepnumber` determina cada cuántas líneas se muestra un número. Así puedes señalar una operación concreta desde el texto.
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -392,7 +392,7 @@ tags:
 > [!definicion] Marco de código
 > Borde de composición seleccionado con la opción `frame`, para delimitar visualmente el bloque.[^docente]
 
-`frame=single` dibuja un borde sencillo. El material usa también `frame=trBL`: las letras identifican lados superior, derecho, inferior e izquierdo, y las mayúsculas permiten un borde doble en esos lados. Se elige un marco cuando separa el código de su contexto sin dificultar la lectura.[^docente]
+`frame=single` rodea el listado con un borde sencillo. El material también usa `frame=trBL`: `t`, `r`, `B` y `L` nombran los lados superior, derecho, inferior e izquierdo; las mayúsculas piden un borde doble en esos lados. Elige un marco si ayuda a separar el código del texto sin estorbar la lectura.[^docente]
 
 ```latex
 \begin{lstlisting}[language=Python,frame=trBL]
@@ -460,9 +460,9 @@ inicio()
 \end{document}
 ```
 
-La definición por sí sola crea la función; `inicio()` realiza la llamada. Al ejecutar ese programa en Python, el bucle recorre diez valores y produce diez líneas de texto. Al compilar el documento LaTeX sólo se imprime el programa. Esta comparación comprueba que el lector distingue las dos operaciones.
+Definir la función no la ejecuta: `inicio()` es la llamada que la pone en marcha. En Python, el bucle recorre diez valores y produce diez líneas. Si compilas el documento LaTeX, en cambio, solo verás el código impreso. Son dos operaciones distintas.
 
-La definición y la llamada cumplen funciones diferentes; `range(10)` recorre los enteros de 0 a 9, sin incluir el extremo final. La sangría delimita qué instrucciones pertenecen a cada bloque.[^python]
+La definición crea la función y la llamada la ejecuta. `range(10)` recorre los enteros del 0 al 9 y se detiene antes del extremo final. La sangría indica qué instrucciones pertenecen a cada bloque.[^python]
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -576,7 +576,7 @@ Para componerlo se sitúa el texto dentro de `lstlisting` con `[language=Java]`.
   caption={Análise das medidas},label={lst:analisis}]{analisis.py}
 ```
 
-El archivo `analisis.py` debe existir en esa ruta. Se incluye el contenido que tenga al compilar; así se evita mantener una segunda copia manual en el `.tex`. La opción no ejecuta el programa ni actualiza cifras redactadas en el informe. Es una ampliación funcional de la documentación del paquete, mientras el resumen docente desarrolla principalmente código incrustado.
+El archivo `analisis.py` tiene que estar en esa ruta cuando compiles. LaTeX incorpora entonces su contenido, de modo que no necesitas mantener una copia aparte en el archivo `.tex`. La orden no ejecuta el programa ni actualiza las cifras escritas en el informe. Es una opción adicional del paquete; el resumen docente se centra sobre todo en el código incrustado.
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -618,7 +618,7 @@ tags:
 > [!definicion] Correspondencia entre código y resultado
 > Relación comprobable entre la versión del programa mostrada, sus entradas, la ejecución realizada y los resultados comunicados.[^integridad]
 
-Una entrega reproducible identifica las dependencias y condiciones relevantes, conserva las entradas utilizadas y permite reconocer de dónde procede el programa. Si hay código ajeno, se atribuye y se respetan sus condiciones de uso; si contiene información personal o credenciales, se prepara una versión que pueda difundirse de forma adecuada.[^integridad]
+Para que otra persona pueda repetir el análisis, indica las dependencias y las condiciones relevantes y conserva las entradas que utilizaste. Si el código es de otra persona, cítala y respeta sus condiciones de uso. Antes de compartirlo, quita o protege la información personal y las credenciales.[^integridad]
 
 ```anki
 deck: Física::Produção de Relatórios::LaTeX
@@ -684,7 +684,7 @@ tags:
 > [!resolucion]- Resolución
 > La compilación LaTeX sólo demuestra que se pudo componer el documento. La sintaxis de Python requiere su propio intérprete y una sangría válida; la corrección del resultado exige comprobar el procedimiento y sus entradas. Finalmente se verifica que el listado del PDF coincide con el programa evaluado. Son evidencias distintas.
 
-La composición del listado cierra una dependencia del informe: permite examinar el procedimiento computacional que interviene en los resultados. Su valor depende de la relación con la evidencia y de [[Física/Grado/1º/Produção de Relatórios/06 Ética y uso académico de las TIC|la integridad, atribución y privacidad]] del material mostrado.
+Un listado bien presentado deja que el lector examine el cálculo que produjo los resultados. Para saber qué demuestra, hay que compararlo con la evidencia; al compartirlo, también deben respetarse [[Física/Grado/1º/Produção de Relatórios/06 Ética y uso académico de las TIC|la integridad, la atribución y la privacidad]].
 
 ## 📚 Fuentes
 
@@ -703,29 +703,29 @@ La composición del listado cierra una dependencia del informe: permite examinar
 
 ## 🧑‍🏫 Prompt para tutor conversacional
 
-Tutoriza a nivel universitario introductorio mediante una pregunta por turno y espera el intento.
+Haz de tutor de primer curso universitario. Plantea una pregunta cada vez y espera el intento del estudiante antes de continuar.
 
-Un listado muestra el programa; no lo ejecuta.
+Empieza por preguntar qué ve el lector en un listado. Aclara que muestra el texto del programa, pero no lo ejecuta.
 
-El curso usa listings plural: usepackage{listings}, lstset para opciones, lstlisting para código incrustado y lstinputlisting para un archivo externo. Lstlistings y lst{language=...} son erratas.
+El material del curso trabaja con el paquete plural listings. Repasa cómo se carga con usepackage{listings}, cómo lstset reúne opciones, cómo lstlisting muestra código dentro del documento y cómo lstinputlisting incorpora un archivo externo. Lstlistings y lst{language=...} son erratas del material.
 
-Listing singular ofrece un entorno no flotante con caption, label después de caption, ref y listoflistings, pero no órdenes lst.
+Compara ese paquete con el entorno del paquete singular listing: no es flotante y admite caption, label después de caption, ref y listoflistings, pero no ofrece las órdenes que empiezan por lst.
 
-Language elige reconocimiento sintáctico; basicstyle monoespaciado, keepspaces, breaklines y showstringspaces configuran presentación.
+Pregunta para qué sirve cada opción: language elige el lenguaje que se reconoce, basicstyle pone el código en letra monoespaciada, keepspaces conserva los espacios, breaklines parte visualmente las líneas largas y showstringspaces decide si se marcan los espacios dentro de cadenas.
 
-Numbers=left, numberstyle=tiny, stepnumber=1 y numbersep=5pt numeran líneas sin cambiar el programa; frame delimita el bloque.
+Repasa también la numeración: numbers=left coloca los números a la izquierda, numberstyle=tiny los hace pequeños, stepnumber=1 los muestra en cada línea y numbersep=5pt los separa del código. Un marco solo delimita el bloque; ninguna de estas opciones cambia el programa.
 
-En Python, def inicio con for range(10) e indentación válida sólo imprime al llamar inicio().
+En Python, una función llamada inicio que contiene un bucle for range(10) solo imprime sus diez líneas cuando se llama a inicio(). Pídele que señale qué hace la definición y qué hace la llamada.
 
-En Java la entrada correcta es main(String[] args); dos bucles que recorren i=0…9 y j=0…7 e imprimen si i==j producen 0…7.
+En Java, la entrada del ejemplo usa main(String[] args). Dos bucles recorren i de 0 a 9 y j de 0 a 7; al imprimir cuando i==j, producen los valores de 0 a 7.
 
-Pide distinguir sintaxis del lenguaje, composición LaTeX y corrección del resultado.
+Haz que distinga tres revisiones: si el programa respeta la sintaxis de su lenguaje, si LaTeX compone correctamente el listado y si el resultado del programa es correcto.
 
-El archivo externo debe estar disponible y el documento se recompila tras cambiarlo; los resultados redactados y la ejecución no se actualizan solos.
+Si se usa un archivo externo, comprueba que esté disponible en la ruta indicada y vuelve a compilar después de cambiarlo. La inclusión no ejecuta el programa ni actualiza por sí sola las cifras redactadas en el informe.
 
-Examina un PDF antiguo, una orden lst con paquete singular y una sangría Python incorrecta.
+Usa tres casos de diagnóstico: un PDF que sigue mostrando una versión antigua, una orden lst escrita con el paquete singular y una sangría de Python incorrecta.
 
-Usa pistas, recuperación activa, repetición espaciada y transferencia a un análisis real. Relaciona versión, entradas, dependencias, atribución y privacidad sin asumir datos que no se han aportado.
+Da pistas y vuelve a preguntar más adelante para reforzar la recuperación. Pasa después a un análisis real: revisad qué versión del programa se usó, con qué entradas y dependencias, quién lo escribió y si contiene datos privados. No supongas que el estudiante dispone de información que no se ha aportado.
 
 ```dataviewjs
 await dv.view("Planes/Estudio/Scripts/study-session", { location: "end" })
