@@ -68,5 +68,5 @@ The collection follows *Produção de Relatórios* in the FCUL Physics degree. T
 
 - [FCUL · Official course programme, 2026/27](https://fenix.ciencias.ulisboa.pt/courses/pr-847504421686893/programa)
 - [Biblioteca de Ciências · Bibliographic resources](https://ciencias.ulisboa.pt/biblioteca/recursos-bibliograficos)
-- [B-on · Resources for students](https://www.b-on.pt/a-b-on-para/estudantes/)
+- [B-on · Online Knowledge Library](https://www.b-on.pt/)
 - [University of Lisbon · Ethics](https://www.ulisboa.pt/info/etica)
