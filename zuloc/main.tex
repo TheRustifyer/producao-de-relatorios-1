@@ -2,6 +2,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[portuguese]{babel}
+\usepackage{tabularx}
 
 \usepackage{url}
 
@@ -32,10 +33,11 @@
 
 \maketitle
 \thispagestyle{empty}
+\clearpage
 
 % Índices — numeração romana
 \pagenumbering{roman}
-\setcounter{page}{1}
+\setcounter{page}{1}  
 
 \tableofcontents
 \listoftables
@@ -47,11 +49,14 @@
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
-\section{Introdução}
+% Introdução
+\input{intro.tex}
 
-\section{Caso de Estudo}
+% Caso de estudo
+\input{caso.tex}
 
-\section{Conclusão}
+% Conclusão
+\input{conclusao.tex}
 
 \clearpage
 \addcontentsline{toc}{section}{Bibliografia}
